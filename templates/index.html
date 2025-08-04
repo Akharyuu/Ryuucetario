@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Recetario</title>
+</head>
+<body>
+  <h1>Recetas</h1>
+  <ul>
+    {% for receta in recetas %}
+      <li><a href="{{ url_for('ver_receta', nombre=receta.name|replace(' ', '-')|lower) }}">{{ receta.name }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

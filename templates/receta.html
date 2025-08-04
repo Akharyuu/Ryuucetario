@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ receta.name }}</title>
+</head>
+<body>
+  <h1>{{ receta.name }}</h1>
+  <p><strong>Cocina:</strong> {{ receta.cuisine }}</p>
+  <p><strong>Raciones:</strong> {{ receta.rations }}</p>
+  <p><strong>Tiempo:</strong> {{ receta.prep_time }} min</p>
+  <p><strong>Categoría:</strong> {{ receta.category }}</p>
+
+  <h2>Ingredientes</h2>
+  <ul>
+    {% for ing in receta.ingredients %}
+      <li>{{ ing.nombre }}{% if ing.cantidad %} ({{ ing.cantidad }} {{ ing.unidad }}){% endif %}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>Pasos</h2>
+  <ol>
+    {% for paso in receta.steps %}
+      <li>{{ paso }}</li>
+    {% endfor %}
+  </ol>
+
+  <a href="{{ url_for('inicio') }}">← Volver</a>
+</body>
+</html>

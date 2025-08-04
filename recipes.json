@@ -1,0 +1,1837 @@
+[
+  {
+    "name": "Cocido de lentejas",
+    "cuisine": "Española",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Lenteja pardina",
+        "cantidad": 280.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Diente de ajo",
+        "cantidad": 2.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Cebolla dulce",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Pimiento verde",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Pimiento rojo",
+        "cantidad": 0.5,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Berenjena",
+        "cantidad": 0.5,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Zanahoria",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Tomate maduro",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Patata (grande)",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Costilla de cerdo o panceta",
+        "cantidad": 250.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Hueso blanco o de jamón",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Chorizo de guisar",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Agua",
+        "cantidad": 3.0,
+        "unidad": "L"
+      },
+      {
+        "nombre": "Hoja de laurel",
+        "cantidad": 2.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Pimentón dulce o de la vera",
+        "cantidad": 2.0,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Pastilla de caldo de carne",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Aceite de oliva",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Pimienta negra",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca"
+      }
+    ],
+    "steps": [
+      "Lavar y escurrir las lentejas en un colador y reservar.",
+      "Poner una olla a fuego medio con un fondo de aceite de oliva y sofreír la carne salpimentada y cortada en trozos pequeños junto a la cebolla en cuartos, los ajos enteros y el laurel.",
+      "Cuando empiece a dorar, añadir el pimentón y remover durante un minuto.",
+      "Añadir progresivamente el resto de verduras: pimiento verde y rojo a trozos medianos, zanahoria en rodajas y berenjena en dados pequeños.",
+      "Cuando dejen de estar crudas, añadir el tomate bien picado y cocinar hasta que se evaporen sus jugos completamente.",
+      "Añadir el agua, las lentejas, la patata a trozos, la pastilla de caldo de carne, el hueso y un puñado de sal.",
+      "Hervir sin tapar a fuego medio-bajo durante mínimo 45 min.",
+      "Poner a hervir el chorizo aparte durante 5 min para que suelte algo de grasa. Incorporarlo a la olla a falta de 10 min de terminar el cocinado."
+    ],
+    "prep_time": 100,
+    "category": "Principal"
+  },
+  {
+    "name": "Fideos a la cazuela",
+    "cuisine": "Española",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Fideo mediano",
+        "cantidad": 200.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Cebolla dulce",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Pimiento verde",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Zanahoria",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Alcachofa",
+        "cantidad": 2.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Tomate maduro",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Patata (grande)",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Llata a dados",
+        "cantidad": 200.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Pimentón de la vera",
+        "cantidad": 1.0,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Cúrcuma",
+        "cantidad": 0.5,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Hoja de laurel",
+        "cantidad": 2.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Pastilla de caldo de carne",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Agua",
+        "cantidad": 3.0,
+        "unidad": "L"
+      },
+      {
+        "nombre": "Aceite de oliva",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Pimienta negra",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca"
+      }
+    ],
+    "steps": [
+      "Poner en una olla a fuego medio un fondo de aceite y sofreír la carne salpimentada y cortada en dados de un bocado, junto a la cebolla a láminas y el laurel.",
+      "Cuando la carne esté dorada, añadir el pimentón y la cúrcuma y remover durante 1 min.",
+      "Incorporar las verduras progresivamente: pimiento a trozos medianos, zanahoria a rodajas y alcachofas a cuartos.",
+      "Cuando las verduras se ablanden, añadir el tomate picado muy fino y cocinar hasta obtener un sofrito espeso y bien integrado.",
+      "Añadir el agua, la patata a trozos, la pastilla de caldo de carne y sal al gusto. Tapar la olla y dejar hervir unos 30 min a fuego medio-bajo.",
+      "Añadir los fideos y dejar hervir sin tapar otros 10-15 min o hasta que estén listos. Corregir de sal."
+    ],
+    "prep_time": 75,
+    "category": "Principal"
+  },
+  {
+    "name": "Fideuá",
+    "cuisine": "Española",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Fideo mediano",
+        "cantidad": 300.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Cebolla dulce",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Diente de ajo",
+        "cantidad": 2.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Pimiento verde",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Sepia pequeña",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Tomate maduro",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Gamba pequeña pelada",
+        "cantidad": 50.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Caldo de pescado o marisco",
+        "cantidad": 1.0,
+        "unidad": "L"
+      },
+      {
+        "nombre": "Aceite de oliva",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca"
+      }
+    ],
+    "steps": [
+      "Limpiar y cortar a dados la sepia y reservar.\nHechar los fideos en una bandeja y tostar en el horno, moviendolos varias veces durante el proceso. Sacar del horno y reservar.\nCalentar el caldo en un cazo y reservar.",
+      "Picar la cebolla y el ajo en brunoise fina. Sofreirlos en una paella grande con una base de aceite a fuego medio.",
+      "Cuando empiece a dorar, añadir el pimiento en trozos medianos y cocinar hasta que esté tierno.",
+      "Agregar la sepia, cocinar 3 min e incorporar el tomate muy picado (o triturado).",
+      "Cocinar hasta que el tomate se integre bien, luego añadir las gambas y cocinar 2 min.",
+      "Añadir los fideos, remover hasta que quede una base bien repartida y homogénea y añadir el caldo caliente y sal al gusto y cocinar a fuego medio-bajo.",
+      "Una vez el caldo se haya evaporado, comprovar el punto de cocción de los fideos. Añadir agua caliente si lo necesita para acabar de cocerse.",
+      "Una vez al punto, llevar la paella al horno precalentado y gratinar en modo grill 5 min antes de servir."
+    ],
+    "prep_time": 60,
+    "category": "Principal"
+  },
+  {
+    "name": "Fricandó de ternera",
+    "cuisine": "Española",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Llata (espaldilla) o tapa de ternera",
+        "cantidad": 500.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Champiñones o otra seta",
+        "cantidad": 200.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Zanahoria",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Cebolla dulce",
+        "cantidad": 2.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Diente de ajo",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Tomate maduro",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Agua",
+        "cantidad": 250.0,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "Pastilla de caldo de carne",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Huevo",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Pan rallado",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Aceite de oliva",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Pimienta negra",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca"
+      }
+    ],
+    "steps": [
+      "Salpimentar y rebozar la carne, pasando primero por el huevo batido y después por el pan rallado.",
+      "En una sartén a fuego medio-alto, freír la carne en un dedo de aceite y reservar sobre papel de cocina para que absorba el exceso de aceite.",
+      "Retirar la mayoría del aceite y cocinar a fuego medio la zanahoria en rodajas y los champiñones laminados. Reservar junto con la carne.",
+      "De nuevo en la sartén, cocinar la cebolla y el ajo laminados hasta que estén dorados. Añadir el tomate picado muy fino y cocinar hasta conseguir un sofrito bien integrado.",
+      "Llevar el sofrito a un vaso de procesado. Añadir el agua, la pastilla de caldo de carne y una pizca de sal. Triturar hasta que quede una salsa homogénea y líquida.",
+      "De vuelta en la sartén (o en una olla, si la sartén es pequeña), añadir todos los ingredientes: carne, zanahoria, setas y salsa, y cocinar a fuego medio-bajo hasta que la salsa espese, removiendo frecuentemente para evitar que se pegue.",
+      "Probar y corregir de sal."
+    ],
+    "prep_time": 60,
+    "category": "Principal"
+  },
+  {
+    "name": "Pollo a la catalana",
+    "cuisine": "Española",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Muslo de pollo",
+        "cantidad": 8.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Cebolla dulce",
+        "cantidad": 3.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Tomate maduro",
+        "cantidad": 2.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Diente de ajo",
+        "cantidad": 4.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Pimientón dulce o de la vera",
+        "cantidad": 1.0,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Cúrcuma",
+        "cantidad": 0.5,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Ciruela deshidratada",
+        "cantidad": 12.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Piñón ibérico",
+        "cantidad": 50.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Vino blanco",
+        "cantidad": 250.0,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "Caldo de pollo",
+        "cantidad": 1.0,
+        "unidad": "L"
+      },
+      {
+        "nombre": "Aceite de oliva",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Pimienta negra",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca"
+      }
+    ],
+    "steps": [
+      "Salpimentar el pollo y dorarlo en una sartén con un fondo de aceite a fuego medio.",
+      "Añadir la cebolla en juliana y el ajo picado y cocinar hasta que empiecen a dorar.",
+      "Añadir el tomate picado y cocinar hasta que quede bien integrado.",
+      "Añadir el pimentón, la cúrcuma y el vino blanco y cocinar hasta que el vino se evapore.",
+      "Añadir el caldo de pollo, las ciruelas y los piñones y cocinar tapado a fuego medio-bajo durante 30 min.",
+      "Destapar y reducir la salsa hasta que tenga la textura deseada. Corregir de sal."
+    ],
+    "prep_time": 45,
+    "category": "Principal"
+  },
+  {
+    "name": "Risotto de bacon y setas",
+    "cuisine": "Italiana",
+    "rations": 2,
+    "ingredients": [
+      {
+        "nombre": "Arroz redondo o bomba",
+        "cantidad": 200.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Cebolla dulce",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Tira de bacon",
+        "cantidad": 4.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Champiñones o otras setas",
+        "cantidad": 150.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Vino blanco",
+        "cantidad": 250.0,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "Caldo de pollo",
+        "cantidad": 1.0,
+        "unidad": "L"
+      },
+      {
+        "nombre": "Queso parmesano",
+        "cantidad": 50.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Mantequilla",
+        "cantidad": 1.5,
+        "unidad": "cda"
+      },
+      {
+        "nombre": "Aceite de oliva",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Pimienta negra",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca"
+      }
+    ],
+    "steps": [
+      "En un olla, rehogar la cebolla en brunoise fina en un fondo de aceite a fuego medio.",
+      "Cuando esté dorada, añadir el bacon cortado en trozos pequeños y los champiñones en láminas. Salpimentar y cocinar hasta que estén dorados.",
+      "Añadir el vino blanco y cocinar hasta que se evapore completamente.",
+      "Incorporar el arroz y remover la mezcla 2 min.",
+      "Añadir el caldo de pollo y cocinar a fuego medio-bajo sin tapar. Remover frecuentemente para promover la liberación del almidón del arroz.",
+      "Cuando el arroz esté cocido y meloso, retirar del fuego. Añadir el parmesano rallado, la mantequilla, corregir de sal y mezclar.",
+      "Servir con más parmesano rallado por encima y pimienta negra recién molida."
+    ],
+    "prep_time": 45,
+    "category": "Principal"
+  },
+  {
+    "name": "Patatas al ajillo con pimentón",
+    "cuisine": "Española",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Patata (mediana)",
+        "cantidad": 8.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Diente de ajo",
+        "cantidad": 4.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Pimentón dulce o de la vera",
+        "cantidad": 2.0,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Comino en polvo",
+        "cantidad": 1.0,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Orégano",
+        "cantidad": 0.5,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Vino blanco",
+        "cantidad": 125.0,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "Agua",
+        "cantidad": 250.0,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "Aceite de oliva",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca"
+      }
+    ],
+    "steps": [
+      "Pelar y cortar las patatas en rodajas y freír en abundante aceite de oliva en una sartén a fuego medio.",
+      "Mientras que fríen las patatas, añadir a un mortero el ajo, el pimentón, el comino, el orégano y una pizca de sal y machacar hasta obtener una pasta.",
+      "Añadir al mortero el agua y el vino blanco, mezclar y reservar.",
+      "Cuando las patatas estén fritas, retirar casi todo el aceite de la sartén y añadir la mezcla del mortero.",
+      "Cocinar a fuego medio, volteando las patatas y empapándolas en la salsa hasta que se evapore."
+    ],
+    "prep_time": 40,
+    "category": "Acompañamiento"
+  },
+  {
+    "name": "Pasta alla carbonara romana",
+    "cuisine": "Italiana",
+    "rations": 2,
+    "ingredients": [
+      {
+        "nombre": "Pasta",
+        "cantidad": 200.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Guanciale",
+        "cantidad": 60.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Huevo",
+        "cantidad": 5.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Queso parmesano o pecorino romano",
+        "cantidad": 70.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Agua",
+        "cantidad": 1.5,
+        "unidad": "L"
+      },
+      {
+        "nombre": "Pimienta negra",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": 1.0,
+        "unidad": "cda"
+      }
+    ],
+    "steps": [
+      "Cortar el guanciale en cubos o tiras, descartando la piel, y freír en su propia grasa en una sartén sin aceite a fuego medio. Reservar el guanciale y la grasa por separado.",
+      "En una olla cocer la pasta con las cantidades de agua y sal hasta que quede al dente.",
+      "Escurrir la pasta y reservar. Reservar también 200ml del agua de cocción. No tirar el resto del agua aún.",
+      "En un bol de metal o cerámica grande, añadir las yemas de los huevos, descartando las claras, el queso rallado (puede ser parmesano, pecorino o una mezcla de los dos) y abundante pimienta negra recién molida. Homogenizar con unas barillas.",
+      "Mantener el agua restante en la olla a fuego bajo para utilizar como baño maría. Colocar el bol con la salsa sobre la olla de forma que se caliente poco a poco con el vapor.",
+      "Añadir al bol la grasa del guanciale e integrarla en la salsa.",
+      "Incorporar pequeñas cantidades del agua de cocción reservada, sin parar de mezclar, hasta lograr una salsa aireada.",
+      "Añadir la pasta al bol junto con un poco más de agua de cocción y mantecar hasta que se integre bien.",
+      "Servir en nidos, decorando con el guanciale y pimienta negra recién molida."
+    ],
+    "prep_time": 40,
+    "category": "Principal"
+  },
+  {
+    "name": "Curry japonés",
+    "cuisine": "Japonesa",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Llata de ternera (o espaldilla)",
+        "cantidad": 500.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Seta shiitake",
+        "cantidad": 8.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Cebolla",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Patata",
+        "cantidad": 2.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Zanahoria",
+        "cantidad": 3.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Nabo",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Pastilla de caldo de carne",
+        "cantidad": 0.5,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Pastilla de curry japonés",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Agua",
+        "cantidad": 1.5,
+        "unidad": "L"
+      },
+      {
+        "nombre": "Hoja de laurel",
+        "cantidad": 3.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Manzana roja",
+        "cantidad": 0.5,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Kétchup",
+        "cantidad": 1.0,
+        "unidad": "cda"
+      },
+      {
+        "nombre": "Salsa perrins",
+        "cantidad": 2.0,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Salsa de soja oscura",
+        "cantidad": 2.0,
+        "unidad": "cda"
+      },
+      {
+        "nombre": "Sichimi togarashi",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Arroz de sushi",
+        "cantidad": 160.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Aceite de girasol",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Pimienta negra",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca"
+      }
+    ],
+    "steps": [
+      "Cortar la carne en dados de un bocado, salpimentar y marcar en una olla con un fondo de aceite a fuego medio-alto.",
+      "Añadir el agua, las setas, el laurel y la pastilla de caldo de carne y hervir tapado 40min a fuego medio-bajo.",
+      "Pelar y cortar las verduras en trozos grandes.",
+      "Pasados los 40min, añadir las verduras a la olla y hervir tapado otros 30 min.",
+      "Terminada la cocción, añadir la pastilla grande de curry, homogeneizar y corregir de sal.",
+      "Añadir la manzana roja rallada, el Kétchup, la salsa Perrins y la salsa de soja.",
+      "Servir junto con arroz blanco de variedad sushi y una pizca de sichimi togarashi sobre el arroz."
+    ],
+    "prep_time": 90,
+    "category": "Principal"
+  },
+  {
+    "name": "Croquetas de jamón",
+    "cuisine": "Española",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Jamón ibérico",
+        "cantidad": 200.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Hueso de jamón",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Leche entera",
+        "cantidad": 350.0,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "Nata para montar",
+        "cantidad": 250.0,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "Mantequilla",
+        "cantidad": 50.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Harina de trigo",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Cebolla",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Huevo",
+        "cantidad": 2.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Panko o pan rallado",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Aceite de girasol",
+        "cantidad": null,
+        "unidad": "pizca"
+      }
+    ],
+    "steps": [
+      "Calentar la nata y la leche en un cazo a fuego bajo junto con el hueso de jamón. Cuando empiece a humear, retirar del fuego y dejar reposar tapado 30min.",
+      "En una sartén calentamos la mantequilla a fuego medio y sofreímos en ella la cebolla cortada en brunoise.",
+      "Cuando la cebolla esté pochada, añadir el jamón picado fino y cocinar 3 min.",
+      "Añadir 50g de harina y cocinar 2 min, integrándola bien.",
+      "Retirar el hueso de la leche infusionada y añadirla en varias tandas, homogenizando la mezcla con unas barillas, hasta echarla toda.",
+      "Reposar en la nevera un mínimo de 4h. Lo ideal es toda la noche.",
+      "Preparar una estación de rebozado: Harina, huevo batido y panko o pan rallado. Dar forma a las croquetas con la ayuda de dos cucharas y rebozar. Se pueden freír al momento o congelar.",
+      "Freír en aceite de girasol a 180º durante 4min si estaban frescas, 6min si estaban congeladas."
+    ],
+    "prep_time": 45,
+    "category": "Entrante"
+  },
+  {
+    "name": "Canelones de confit de pato",
+    "cuisine": "Española",
+    "rations": 6,
+    "ingredients": [
+      {
+        "nombre": "Muslo de pato confitado (lata)",
+        "cantidad": 4.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Canelón crudo",
+        "cantidad": 20.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Cebolla dulce",
+        "cantidad": 2.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Manzana roja",
+        "cantidad": 0.5,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Paté de foie",
+        "cantidad": 200.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Leche entera",
+        "cantidad": 1.0,
+        "unidad": "L"
+      },
+      {
+        "nombre": "Nata de montar",
+        "cantidad": 200.0,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "Harina de trigo",
+        "cantidad": 75.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Trufa fresca",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Azúcar moreno",
+        "cantidad": 2.0,
+        "unidad": "cda"
+      },
+      {
+        "nombre": "Nuez moscada",
+        "cantidad": 1.0,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Queso parmesano",
+        "cantidad": 75.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Aceite de oliva",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Pimienta negra",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca"
+      }
+    ],
+    "steps": [
+      "Desmenuzar la carne de pato en un bol y descartar los huesos. Reservar también la grasa aparte.",
+      "En una sartén a fuego medio, sofreír en aceite de oliva una cebolla en brunoise. Una vez pochada, añadir el azúcar moreno y caramelizar.",
+      "Añadir la manzana rallada y cocinar 2 min. Después añadir la carne de pato y el paté y cocinar hasta que el relleno parezca homogéneo. Reservar en un bol en la nevera.",
+      "Para la bechamel, confitamos una cebolla en brunoise en 75g de la grasa de pato reservada anteriormente a fuego medio. Mientras tanto, calentar la nata y la leche en una olla a fuego bajo hasta que empiece a humear.",
+      "Cuando la cebolla esté pochada, añadir la harina y cocinar 2 min. Añadir la leche caliente en tandas e integrar en el roux antes de añadir más.",
+      "Una vez integrada toda la leche y la bechamel tenga la consistencia deseada, retirar del fuego y añadir la nuez moscada y las ralladuras de trufa. Corregir de sal y pimienta negra al gusto.",
+      "Rellenar los canelones crudos manualmente con el relleno enfriado en la nevera y reservar.",
+      "En una bandeja de horno, poner una fina base de la bechamel y colocar sobre ella los canelones. Cubrir los canelones con el resto de la bechamel. Por último, añadir el queso parmesano rallado por encima.",
+      "Colocar la bandeja en el centro del horno y hornear arriba y abajo a 180º durante 40 min."
+    ],
+    "prep_time": 105,
+    "category": "Principal"
+  },
+  {
+    "name": "Guacamole",
+    "cuisine": "Mexicana",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Aguacate maduro",
+        "cantidad": 2.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Tomate maduro",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Cebolla",
+        "cantidad": 0.25,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Hojas de cilantro",
+        "cantidad": 8.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Lima",
+        "cantidad": 0.5,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Aceite de oliva",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Pimienta negra",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca"
+      }
+    ],
+    "steps": [
+      "Pelar los aguacates y reservar uno de los huesos. Cortar el tomate y la cebolla en brunoise fina y picar las hojas de cilantro.",
+      "Añadir el aguacate, el tomate, la cebolla y el cilantro a un bol junto con un chorro generoso de aceite de oliva, una pizca de sal, pimienta negra recién molida y el zumo de lima.",
+      "Con un tenedor, aplastar los aguacates junto con los demás ingredientes hasta conseguir una pasta homogénea. Corregir de sal.",
+      "Si no se va a consumir inmediatamente: colocar el hueso de aguacate en el centro y cubrir el bol con film en contacto directo con el guacamole para evitar que se oxide. Reservar en la nevera."
+    ],
+    "prep_time": 10,
+    "category": "Salsa"
+  },
+  {
+    "name": "Nata agria",
+    "cuisine": "Mexicana",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Nata de montar",
+        "cantidad": 200.0,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "Limón",
+        "cantidad": 0.5,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca"
+      }
+    ],
+    "steps": [
+      "Añadir la nata a un bol junto con una pizca de sal y el zumo de medio limón.",
+      "Con una cuchara, mover la mezcla hasta que la nata cuaje y adquiera una textura cremosa. Corregir de sal."
+    ],
+    "prep_time": 5,
+    "category": "Salsa"
+  },
+  {
+    "name": "Chili con carne",
+    "cuisine": "Mexicana",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Carne picada de ternera",
+        "cantidad": 500.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Cebolla dulce",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Pimiento rojo",
+        "cantidad": 0.5,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Caldo de pollo",
+        "cantidad": 300.0,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "Tomate triturado",
+        "cantidad": 400.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Lata de chili con frijoles",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Cayena molida",
+        "cantidad": 0.25,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Chile en polvo",
+        "cantidad": 0.25,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Comino en polvo",
+        "cantidad": 2.0,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Pimentón dulce",
+        "cantidad": 0.5,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Pimentón picante",
+        "cantidad": 0.5,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Orégano",
+        "cantidad": 2.0,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Azúcar moreno",
+        "cantidad": 2.0,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Salsa perrins",
+        "cantidad": 2.0,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Nata agria",
+        "cantidad": 200.0,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "Hoja de cilantro fresco",
+        "cantidad": 4.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Agua",
+        "cantidad": 250.0,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "Aceite de girasol",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Pimienta negra",
+        "cantidad": null,
+        "unidad": "pizca"
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca"
+      }
+    ],
+    "steps": [
+      "En una sartén, dorar la carne sin salpimentar en un fondo de aceite de girasol a fuego medio y reservar.",
+      "En la misma sartén, añadir la cebolla y el pimiento rojo cortados en brunoise fina junto con más aceite si es necesario. Salpimentar las verduras y añadir las especias: cayena, chile, comino, pimentón y orégano.",
+      "Devolver la carne a la sartén y remover 5 min. Añadir el caldo de pollo y cocina hasta que se reduzca completamente.",
+      "Añadir el tomate triturado con un poco de sal y cocina hasta que quede bien integrado.",
+      "Sazonar con azúcar y salsa Perrins y añadir el chili con frijoles junto con el agua. Cocinar hasta que reduzca de nuevo y quede espeso.",
+      "Servir en un bol y adornar con un par de cucharadas de nata agria y unas hojas de cilantro."
+    ],
+    "prep_time": 50,
+    "category": "Acompañamiento"
+  },
+  {
+    "name": "Bechamel",
+    "cuisine": "Francesa",
+    "rations": 2,
+    "ingredients": [
+      {
+        "nombre": "Leche",
+        "cantidad": 500.0,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "Mantequilla",
+        "cantidad": 50.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Harina de trigo",
+        "cantidad": 50.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Nuez moscada",
+        "cantidad": 0.25,
+        "unidad": "cdta"
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca"
+      }
+    ],
+    "steps": [
+      "En un cazo, calentar la leche a fuego bajo hasta que empiece a humear. Reservar.",
+      "En una sartén, derretir la mantequilla a fuego medio. Una vez derretida y caliente, añadir la harina y cocinar 2 min, removiendo con unas barillas.",
+      "Añadir la leche en tandas, integrándola completamente antes de echar más.",
+      "Una vez integrada toda la leche, retirar del fuego, añadir la nuez moscada y corregir de sal."
+    ],
+    "prep_time": 15,
+    "category": "Salsa"
+  },
+  {
+    "name": "Pasta al pesto",
+    "cuisine": "Italiana",
+    "rations": 2,
+    "ingredients": [
+      {
+        "nombre": "Pasta",
+        "cantidad": 200.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Diente de ajo",
+        "cantidad": 1.0,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "Albahaca fresca",
+        "cantidad": 60.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Piñón ibérico",
+        "cantidad": 30.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Queso parmesano",
+        "cantidad": 50.0,
+        "unidad": "g"
+      },
+      {
+        "nombre": "Aceite de oliva",
+        "cantidad": 50.0,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "Agua",
+        "cantidad": 1.5,
+        "unidad": "L"
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": 1.0,
+        "unidad": "cda"
+      }
+    ],
+    "steps": [
+      "En una olla, cocer la pasta a fuego alto en agua salada hasta que esté al dente.",
+      "En un mortero, añadir el diente de ajo sin el germen junto con algo de sal para que haga de abrasivo y machacar hasta formar una pasta.",
+      "Tostar ligeramente los piñones en una sartén sin aceite a fuego medio. Añadirlos al mortero.",
+      "Separar las hojas de albahaca y descartar los tallos. Añadirlas al mortero también.",
+      "Por último, añadir el queso parmesano ya rallado al mortero y machacar todo hasta formar una pasta.",
+      "Añadir al mortero el aceite de oliva e integrarlo con la pasta con la ayuda de una cucharilla.",
+      "Escurrir la pasta en un bol grande y añadir la salsa del mortero. Añadir tambien un poco del agua de cocción y mantecar hasta que la salsa quede ligada con la pasta.",
+      "Servir en nidos con parmesano rallado por encima."
+    ],
+    "prep_time": 35,
+    "category": "Principal"
+  },
+  {
+    "name": "Ternera en salsa de ostras",
+    "cuisine": "China",
+    "rations": 2,
+    "ingredients": [
+      {
+        "nombre": "Filete de ternera",
+        "cantidad": 250.0,
+        "unidad": "g",
+        "nota": ""
+      },
+      {
+        "nombre": "Cebolla dulce",
+        "cantidad": 1.0,
+        "unidad": "unidad",
+        "nota": ""
+      },
+      {
+        "nombre": "Puerro",
+        "cantidad": 1.0,
+        "unidad": "unidad",
+        "nota": ""
+      },
+      {
+        "nombre": "Bicarbonato sódico",
+        "cantidad": 0.5,
+        "unidad": "cdta",
+        "nota": ""
+      },
+      {
+        "nombre": "Salsa de soja",
+        "cantidad": 1.0,
+        "unidad": "cdta",
+        "nota": "para el marinado"
+      },
+      {
+        "nombre": "Salsa de soja",
+        "cantidad": 10.0,
+        "unidad": "ml",
+        "nota": "para la salsa"
+      },
+      {
+        "nombre": "Salsa de soja oscura",
+        "cantidad": 10.0,
+        "unidad": "ml",
+        "nota": ""
+      },
+      {
+        "nombre": "Salsa de ostras",
+        "cantidad": 20.0,
+        "unidad": "g",
+        "nota": ""
+      },
+      {
+        "nombre": "Harina de maicena",
+        "cantidad": 1.0,
+        "unidad": "cdta",
+        "nota": "para el marinado"
+      },
+      {
+        "nombre": "Harina de maicena",
+        "cantidad": 3.0,
+        "unidad": "g",
+        "nota": "para el espesante"
+      },
+      {
+        "nombre": "Aceite de sésamo",
+        "cantidad": 1.0,
+        "unidad": "cdta",
+        "nota": ""
+      },
+      {
+        "nombre": "Aceite de girasol",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": ""
+      },
+      {
+        "nombre": "Agua",
+        "cantidad": 25.0,
+        "unidad": "ml",
+        "nota": ""
+      },
+      {
+        "nombre": "Azúcar moreno",
+        "cantidad": 10.0,
+        "unidad": "g",
+        "nota": ""
+      },
+      {
+        "nombre": "Glutamato monosódico",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": ""
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": ""
+      }
+    ],
+    "steps": [
+      "Cortar la carne en tiras finas de un bocado, en ángulo y en el sentido opuesto de las fibras.",
+      "Colocar la carne en un bol y añadir: pizca de sal, pizca de glutamato monosódico, el bicarbonato, 1 cdta de salsa de soja, 1 cdta de harina de maicena y 1 cdta de aceite de sésamo. Mezclar y dejar marinar mientras preparamos el resto de ingredientes.",
+      "Trocear el puerro y la cebolla en trozos medianos y reservar.",
+      "Para la salsa: en un bol añadir 10ml de salsa de soja, la salsa de soja oscura, la salsa de ostras, el azúcar moreno y mezclamos.",
+      "Preparar además, en un vaso, el espesante: añadir el agua con 3g de maicena.",
+      "En una sartén a fuego alto, añadir una base de aceite de girasol y saltear la ternera 30 segundos. Añadir las verduras y saltear durante 1min con la ayuda de un soplete. Añadir la salsa y el espesante, mezclar todo 10 segundos y retirar del fuego.",
+      "Servir inmediatamente acompañado de arroz blanco."
+    ],
+    "prep_time": 25,
+    "category": "Principal"
+  },
+  {
+    "name": "Pollo Tex-Mex",
+    "cuisine": "Mexicana",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Contramuslo de pollo deshuesado",
+        "cantidad": 4.0,
+        "unidad": "unidad",
+        "nota": ""
+      },
+      {
+        "nombre": "Pimiento verde",
+        "cantidad": 1.0,
+        "unidad": "unidad",
+        "nota": ""
+      },
+      {
+        "nombre": "Pimiento rojo",
+        "cantidad": 0.5,
+        "unidad": "unidad",
+        "nota": ""
+      },
+      {
+        "nombre": "Pimiento amarillo",
+        "cantidad": 1.0,
+        "unidad": "unidad",
+        "nota": ""
+      },
+      {
+        "nombre": "Diente de ajo",
+        "cantidad": 3.0,
+        "unidad": "g",
+        "nota": ""
+      },
+      {
+        "nombre": "Salsa de soja",
+        "cantidad": 60.0,
+        "unidad": "ml",
+        "nota": ""
+      },
+      {
+        "nombre": "Lima",
+        "cantidad": 2.0,
+        "unidad": "unidad",
+        "nota": ""
+      },
+      {
+        "nombre": "Aceite de girasol",
+        "cantidad": 60.0,
+        "unidad": "ml",
+        "nota": ""
+      },
+      {
+        "nombre": "Salsa perrins",
+        "cantidad": 1.0,
+        "unidad": "cda",
+        "nota": ""
+      },
+      {
+        "nombre": "Comino en grano",
+        "cantidad": 2.0,
+        "unidad": "cdta",
+        "nota": ""
+      },
+      {
+        "nombre": "Azúcar moreno",
+        "cantidad": 20.0,
+        "unidad": "g",
+        "nota": ""
+      },
+      {
+        "nombre": "Pimentón dulce",
+        "cantidad": 1.0,
+        "unidad": "cdta",
+        "nota": ""
+      },
+      {
+        "nombre": "Cayena en polvo",
+        "cantidad": 0.5,
+        "unidad": "cdta",
+        "nota": ""
+      },
+      {
+        "nombre": "Pimienta negra",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": ""
+      }
+    ],
+    "steps": [
+      "Marinado: En un bol añadir los dientes de ajo picados fino, la salsa de soja, el zumo de las limas, el aceite de girasol, la salsa Perrins, el comino, el azúcar moreno, el pimentón, la cayena y abundante pimienta negra. Mezclar todo. Añadir al bol los contramuslos enteros y dejar marinar un mínimo de 30min.",
+      "Cortar la cebolla en trozos medianos y los pimientos en tiras gruesas y reservar.",
+      "Precalentar el horno a 200ºC. Retirar los contramuslos del marinado y secar el exceso de salsa con papel de cocina. Reservar el marinado del bol. Añadir el pollo a una bandeja de horno y cocina en el piso superior durante 4min en modo grill. Dar la vuelta y cocinar durante 5min más.",
+      "Reservar el pollo y añadir las verduras a la bandeja de horno junto con el marinado restante. Cocinar en el piso intermedio durante 20min en modo calor arriba y abajo.",
+      "Cortar el pollo en tiras, añadir a la bandeja de horno y calentar otros 3min con el horno apagado.",
+      "Servir como relleno para tortillas."
+    ],
+    "prep_time": 75,
+    "category": "Principal"
+  },
+  {
+    "name": "Mac and cheese",
+    "cuisine": "Americana",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Pasta hueca",
+        "cantidad": 450.0,
+        "unidad": "g",
+        "nota": "Los típicos son los \"coditos\" o \"tiburones\""
+      },
+      {
+        "nombre": "Queso cheddar",
+        "cantidad": 100.0,
+        "unidad": "g",
+        "nota": ""
+      },
+      {
+        "nombre": "Queso parmesano",
+        "cantidad": 10.0,
+        "unidad": "g",
+        "nota": ""
+      },
+      {
+        "nombre": "Leche evaporada",
+        "cantidad": 125.0,
+        "unidad": "ml",
+        "nota": "Sustituible por leche"
+      },
+      {
+        "nombre": "Mostaza de dijon",
+        "cantidad": 1.0,
+        "unidad": "cdta",
+        "nota": ""
+      },
+      {
+        "nombre": "Agua fría",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": "Opcional"
+      },
+      {
+        "nombre": "Chili en polvo",
+        "cantidad": 0.25,
+        "unidad": "cdta",
+        "nota": "Opcional"
+      },
+      {
+        "nombre": "Lao gan ma",
+        "cantidad": 1.0,
+        "unidad": "cda",
+        "nota": "Opcional"
+      }
+    ],
+    "steps": [
+      "En una sartén, añadir la pasta y cubrirla de agua fría hasta que quede toda completamente sumergida y llevarla a ebullición a fuego medio-alto.",
+      "Mientras la pasta se cocina, rallar los quesos y reservar. Si la pasta aún no está cocida y la sartén se queda sin agua, añadir un poco más.",
+      "Cuando la pasta esté cocinada y aún con un poco de agua en la sartén, añadir la leche evaporada. Esperar a que hierva y reducir el fuego a medio-bajo. Añadir los quesos y la mostaza y remover hasta que se forme la salsa.",
+      "Opcionalmente, añadir chili en polvo a la salsa y coronar el emplatado con Lao Gan Ma."
+    ],
+    "prep_time": 20,
+    "category": "Principal"
+  },
+  {
+    "name": "Katsu curry",
+    "cuisine": "Japonesa",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Pechuga o contramuslo de pollo",
+        "cantidad": 2.0,
+        "unidad": "unidad",
+        "nota": "Sustituible por 4 trozos de cinta de lomo de cerdo de un buen grosor"
+      },
+      {
+        "nombre": "Cebolla dulce",
+        "cantidad": 2.0,
+        "unidad": "unidad",
+        "nota": ""
+      },
+      {
+        "nombre": "Mantequilla",
+        "cantidad": 2.0,
+        "unidad": "cda",
+        "nota": "Para sofreír la cebolla"
+      },
+      {
+        "nombre": "Mantequilla",
+        "cantidad": 80.0,
+        "unidad": "g",
+        "nota": "Para el roux"
+      },
+      {
+        "nombre": "Caldo de pollo",
+        "cantidad": 1.0,
+        "unidad": "L",
+        "nota": ""
+      },
+      {
+        "nombre": "Seta shiitake",
+        "cantidad": 4.0,
+        "unidad": "unidad",
+        "nota": ""
+      },
+      {
+        "nombre": "Manzana roja",
+        "cantidad": 1.0,
+        "unidad": "unidad",
+        "nota": ""
+      },
+      {
+        "nombre": "Kétchup",
+        "cantidad": 3.0,
+        "unidad": "cda",
+        "nota": ""
+      },
+      {
+        "nombre": "Harina de trigo",
+        "cantidad": 70.0,
+        "unidad": "g",
+        "nota": ""
+      },
+      {
+        "nombre": "Curry en polvo",
+        "cantidad": 25.0,
+        "unidad": "g",
+        "nota": ""
+      },
+      {
+        "nombre": "Furikake",
+        "cantidad": 1.0,
+        "unidad": "cda",
+        "nota": ""
+      },
+      {
+        "nombre": "Salsa perrins",
+        "cantidad": 20.0,
+        "unidad": "ml",
+        "nota": ""
+      },
+      {
+        "nombre": "Salsa de soja oscura",
+        "cantidad": 15.0,
+        "unidad": "ml",
+        "nota": ""
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": ""
+      },
+      {
+        "nombre": "Harina de trigo",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": "Para el rebozado"
+      },
+      {
+        "nombre": "Huevo",
+        "cantidad": 1.0,
+        "unidad": "unidad",
+        "nota": "Para el rebozado"
+      },
+      {
+        "nombre": "Panko",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": "Para el rebozado"
+      },
+      {
+        "nombre": "Aceite de girasol",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": ""
+      }
+    ],
+    "steps": [
+      "En una sartén a fuego medio deshacer la mantequilla y confitar las cebollas cortadas en juliana junto a una pizca de sal hasta que estén profundamente caramelizadas (entre 20 y 30min).",
+      "Mientras tanto, añadir a un cazo el caldo de pollo y las setas y llevar a ebuillición. Retirar del fuego y dejar infusionar tapado 20min.",
+      "Cuando la cebolla esté lista, añadir la manzana rallada y el kétchup y cocinar 3min. Después añadir la mantequilla para formar el roux y, cuando esté deshecha, añadir la harina, el curry y el furikake, y cocinar 2min.",
+      "Hechar el caldo infusionado progresivamente e ir integrandolo con el roux para formar la salsa. Una vez esté todo incorporado, sazonamos con salsa Perrins y salsa de soja. Corregir de sal y de acidez (con kétchup).",
+      "Llevar la salsa a un vaso de procesado, triturar bien fino y tamizar.",
+      "Si la proteína es pechuga de pollo, dividirlas con un corte por el centro para disminuir el grosor y salpimentar.",
+      "Si la proteína es lomo de cerdo, realizar cortes superficiales por ambas caras y por el borde para evitar que se doble al freirlo y para que quede más tierno. Estirarlo a golpes con un martillo de cocina o un cazo para ablandarlo. Salpimentar por ambos lados.",
+      "Rebozamos en harina con pizca de sal, huevo batido con 2 cdtas de agua y panko.",
+      "En una sartén, añadir aceite de girasol y freír la proteína a 170ºC, 3min por cada lado (o al llegar a 55ºC en el interior). Dejar escurrir el exceso de aceite y cortar en tiras gordas a lo ancho.",
+      "Emplatado: En un bol, añadir una base de arroz blanco (variedad sushi) a un lado y el otro con la salsa de curry. Coronar con la proteina en el centro y una pizca de furikake por encima."
+    ],
+    "prep_time": 90,
+    "category": "Principal"
+  },
+  {
+    "name": "Pasta alla zozzona",
+    "cuisine": "Italiana",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Pasta",
+        "cantidad": 350.0,
+        "unidad": "g",
+        "nota": ""
+      },
+      {
+        "nombre": "Guanciale",
+        "cantidad": 100.0,
+        "unidad": "g",
+        "nota": ""
+      },
+      {
+        "nombre": "Salchicha",
+        "cantidad": 4.0,
+        "unidad": "unidad",
+        "nota": "Sustituible por 250g de carne picada"
+      },
+      {
+        "nombre": "Cebolla dulce",
+        "cantidad": 1.0,
+        "unidad": "unidad",
+        "nota": ""
+      },
+      {
+        "nombre": "Concentrado de tomate",
+        "cantidad": 1.0,
+        "unidad": "cda",
+        "nota": ""
+      },
+      {
+        "nombre": "Cayena molida",
+        "cantidad": 0.25,
+        "unidad": "cdta",
+        "nota": ""
+      },
+      {
+        "nombre": "Tomate triturado",
+        "cantidad": 400.0,
+        "unidad": "g",
+        "nota": ""
+      },
+      {
+        "nombre": "Huevo",
+        "cantidad": 3.0,
+        "unidad": "unidad",
+        "nota": ""
+      },
+      {
+        "nombre": "Queso parmesano",
+        "cantidad": 50.0,
+        "unidad": "g",
+        "nota": "Sustituible por pecorino romano"
+      },
+      {
+        "nombre": "Agua",
+        "cantidad": 2.0,
+        "unidad": "L",
+        "nota": ""
+      },
+      {
+        "nombre": "Pimienta negra",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": ""
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": ""
+      }
+    ],
+    "steps": [
+      "Cortar el guanciale en tiras y descartar la piel. Freír en su propia grasa en una sartén sin aceite a fuego medio. Reservar el guanciale.",
+      "Añadir a la sartén las salchichas descamisadas y abundante pimienta negra. Dorar unos minutos y añadir la cebolla en brunoise. Cuando la cebolla esté pochada, añadir el concentrado de tomate y la cayena, remover 1min y añadir el tomate triturado. Dejar reducir la salsa durante 10min.",
+      "Hervir la pasta en una olla con agua salada.",
+      "En un bol, añadir las yemas de los huevos, el queso parmesano rallado y abundante pimienta negra. Mezclar con unas barillas.",
+      "Cuando la pasta esté cocida, añadirla a la sartén junto con la salsa de tomate y un poco del agua de cocción y mantecar.",
+      "Cuando esté formada la salsa, retirar del fuego y añadir el guanciale y la salsa de huevo.",
+      "Retirar de la sartén o servir rápidamente en nidos."
+    ],
+    "prep_time": 45,
+    "category": "Principal"
+  },
+  {
+    "name": "Gambas al ajillo",
+    "cuisine": "Española",
+    "rations": 4,
+    "ingredients": [
+      {
+        "nombre": "Gamba arrocera fresca",
+        "cantidad": 30.0,
+        "unidad": "unidad",
+        "nota": "Sin congelar"
+      },
+      {
+        "nombre": "Diente de ajo",
+        "cantidad": 8.0,
+        "unidad": "unidad",
+        "nota": ""
+      },
+      {
+        "nombre": "Aceite de oliva",
+        "cantidad": 150.0,
+        "unidad": "ml",
+        "nota": ""
+      },
+      {
+        "nombre": "Perejil fresco",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": ""
+      },
+      {
+        "nombre": "Bicarbonato sódico",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": ""
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": ""
+      }
+    ],
+    "steps": [
+      "Pelar las gambas y reservar la carne por un lado y las cabezas y peladuras por otro.",
+      "Enjuagar las gambas en agua, secar con papel de cocina y añadir una pizca de sal y bicarbonato. Mezclar y reposar mientras se prepara el resto de ingredientes.",
+      "Láminar 6 dientes de ajo y dejar 2 enteros. Picar las hojas de una rama de perejil fresco muy fino y reservar.",
+      "En una sartén a fuego medio añadir el aceite, las cabezas y peladuras y los 2 dientes de ajo enteros. Sofreír durante 10min aplastando las cabezas para que suelten sus jugos.",
+      "Colar el aceite y descartar lo demás. Devolver el aceite a la sartén y sofreír los ajos laminados 2min a fuego medio.",
+      "Añadir las gambas y cocinar 30 segundos por cada lado. Añadir el perejil picado, mezclar y retirar del fuego. Servir inmediatamente."
+    ],
+    "prep_time": 20,
+    "category": "Entrante"
+  },
+  {
+    "name": "Ensalada de pepino machacado",
+    "cuisine": "China",
+    "rations": 2,
+    "ingredients": [
+      {
+        "nombre": "Pepino",
+        "cantidad": 2.0,
+        "unidad": "unidad",
+        "nota": ""
+      },
+      {
+        "nombre": "Vinagre negro",
+        "cantidad": 30.0,
+        "unidad": "ml",
+        "nota": "Sustituible por vinagre de Jerez"
+      },
+      {
+        "nombre": "Salsa de soja",
+        "cantidad": 10.0,
+        "unidad": "ml",
+        "nota": ""
+      },
+      {
+        "nombre": "Aceite de sésamo",
+        "cantidad": 10.0,
+        "unidad": "ml",
+        "nota": ""
+      },
+      {
+        "nombre": "Aceite de chiles",
+        "cantidad": 20.0,
+        "unidad": "ml",
+        "nota": ""
+      },
+      {
+        "nombre": "Diente de ajo",
+        "cantidad": 1.0,
+        "unidad": "unidad",
+        "nota": ""
+      },
+      {
+        "nombre": "Sésamo blanco",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": ""
+      },
+      {
+        "nombre": "Cacahuete frito",
+        "cantidad": 10.0,
+        "unidad": "g",
+        "nota": ""
+      },
+      {
+        "nombre": "Glutamato monosódico",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": ""
+      },
+      {
+        "nombre": "Sal",
+        "cantidad": null,
+        "unidad": "pizca",
+        "nota": ""
+      }
+    ],
+    "steps": [
+      "Machacar un poco el pepino para romper sus fibras. Terminar de trocearlo con un cuchillo.",
+      "Poner el pepino en un colador y mezclarlo con una pizca de sal. Dejar reposar en la nevera 30min para que suelte el exceso de agua. Colocar un bol debajo para recoger todo el agua que desprenderán.",
+      "Para la salsa: En un bol añadir el vinagre, la salsa de soja, el aceite de sésamo, el aceite de chiles, el diente de ajo rallado, una pizca generosa de sésamo blanco, pizca de sal y pizca de glutamato. Mezclamos bien.",
+      "Añadir el pepino al bol de la salsa y mezclar. Finalizar con el cacahuete y un chorrito de aceite de chiles. Servir frío. Si se deja marinar, sabe aún mejor."
+    ],
+    "prep_time": 15,
+    "category": "Entrante"
+  }
+]
