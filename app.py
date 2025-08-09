@@ -1,4 +1,5 @@
 from flask import Flask, render_template, abort
+from flask import request, redirect, url_for
 import json, os
 
 app = Flask(__name__)
@@ -29,6 +30,81 @@ def ver_receta(nombre):
         if r["name"].lower().replace(" ", "-") == nombre.lower():
             return render_template("receta.html", receta=r)
     abort(404)
+
+@app.route("/nueva", methods=["GET", "POST"])
+def nueva_receta():
+    if request.method == "POST":
+        recetas = cargar_recetas()
+
+        # Parseo sencillo: 1 ingrediente por línea, 1 paso por línea
+        ingredients_str = request.form.get("ingredients", "")
+        steps_str = request.form.get("steps", "")
+
+        ingredientes = [s.strip() for s in ingredients_str.splitlines() if s.strip()]
+        pasos = [s.strip() for s in steps_str.splitlines() if s.strip()]
+
+        # Campos numéricos tolerantes (si vienen vacíos → 0)
+        def to_int(x, default=0):
+            try:
+                return int(x)
+            except:
+                return default
+
+        nueva = {
+            "name": request.form.get("name", "").strip(),
+            "cuisine": request.form.get("cuisine", "").strip(),
+            "rations": to_int(request.form.get("rations", 0)),
+            "prep_time": to_int(request.form.get("prep_time", 0)),
+            "category": request.form.get("category", "").strip() or "Principal",
+            "ingredients": ingredientes,
+            "steps": pasos
+        }
+
+        recetas.append(nueva)
+        with open(ARCHIVO_RECETAS, "w", encoding="utf-8") as f:
+            json.dump(recetas, f, ensure_ascii=False, indent=2)
+        return redirect(url_for("inicio"))
+
+    return render_template("form_receta.html", receta=None)
+
+
+@app.route("/editar/<nombre>", methods=["GET", "POST"])
+def editar_receta(nombre):
+    recetas = cargar_recetas()
+    slug = nombre.lower()
+    receta = next((r for r in recetas if r["name"].lower().replace(" ", "-") == slug), None)
+    if not receta:
+        abort(404)
+
+    if request.method == "POST":
+        ingredients_str = request.form.get("ingredients", "")
+        steps_str = request.form.get("steps", "")
+
+        ingredientes = [s.strip() for s in ingredients_str.splitlines() if s.strip()]
+        pasos = [s.strip() for s in steps_str.splitlines() if s.strip()]
+
+        def to_int(x, default=0):
+            try:
+                return int(x)
+            except:
+                return default
+
+        receta.update({
+            "name": request.form.get("name", "").strip(),
+            "cuisine": request.form.get("cuisine", "").strip(),
+            "rations": to_int(request.form.get("rations", 0)),
+            "prep_time": to_int(request.form.get("prep_time", 0)),
+            "category": request.form.get("category", "").strip() or "Principal",
+            "ingredients": ingredientes,
+            "steps": pasos
+        })
+
+        with open(ARCHIVO_RECETAS, "w", encoding="utf-8") as f:
+            json.dump(recetas, f, ensure_ascii=False, indent=2)
+        # Redirigimos al detalle con el nuevo slug por si cambió el nombre
+        return redirect(url_for("ver_receta", nombre=receta["name"].lower().replace(" ", "-")))
+
+    return render_template("form_receta.html", receta=receta)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))

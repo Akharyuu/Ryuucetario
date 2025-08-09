@@ -6,9 +6,13 @@
 </head>
 <body>
   <h1>Recetas</h1>
+  <p><a href="{{ url_for('nueva_receta') }}">➕ Añadir receta</a></p>
   <ul>
     {% for receta in recetas %}
-      <li><a href="{{ url_for('ver_receta', nombre=receta.name|replace(' ', '-')|lower) }}">{{ receta.name }}</a></li>
+      <li>
+        <a href="{{ url_for('ver_receta', nombre=receta.name|replace(' ', '-')|lower) }}">{{ receta.name }}</a>
+        · <a href="{{ url_for('editar_receta', nombre=receta.name|replace(' ', '-')|lower) }}">Editar</a>
+      </li>
     {% endfor %}
   </ul>
 </body>

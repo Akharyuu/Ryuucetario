@@ -14,7 +14,13 @@
   <h2>Ingredientes</h2>
   <ul>
     {% for ing in receta.ingredients %}
-      <li>{{ ing.nombre }}{% if ing.cantidad %} ({{ ing.cantidad }} {{ ing.unidad }}){% endif %}</li>
+      {% if ing is mapping %}
+        <li>
+          {{ ing.nombre }}{% if ing.cantidad %} ({{ ing.cantidad }} {{ ing.unidad }}){% endif %}{% if ing.nota %} – {{ ing.nota }}{% endif %}
+        </li>
+      {% else %}
+        <li>{{ ing }}</li>
+      {% endif %}
     {% endfor %}
   </ul>
 
@@ -25,6 +31,10 @@
     {% endfor %}
   </ol>
 
-  <a href="{{ url_for('inicio') }}">← Volver</a>
+  <p>
+    <a href="{{ url_for('editar_receta', nombre=receta.name|replace(' ', '-')|lower) }}">✏️ Editar</a>
+    · <a href="{{ url_for('inicio') }}">Volver</a>
+  </p>
+
 </body>
 </html>

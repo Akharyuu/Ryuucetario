@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>{% if receta %}Editar{% else %}Nueva{% endif %} receta</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+  <style>
+    body { max-width: 760px; margin: 20px auto; }
+    form > div { margin-bottom: 12px; }
+    input[type=text], input[type=number], textarea { width: 100%; padding: 8px; }
+    textarea { height: 140px; }
+    .fila { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  </style>
+</head>
+<body>
+  <h1>{% if receta %}Editar{% else %}Nueva{% endif %} receta</h1>
+
+  <form method="POST">
+    <div>
+      <label>Nombre</label>
+      <input type="text" name="name" required value="{{ receta.name if receta }}">
+    </div>
+
+    <div class="fila">
+      <div>
+        <label>Cocina</label>
+        <input type="text" name="cuisine" value="{{ receta.cuisine if receta }}">
+      </div>
+      <div>
+        <label>Categoría</label>
+        <input type="text" name="category" value="{{ receta.category if receta }}">
+      </div>
+    </div>
+
+    <div class="fila">
+      <div>
+        <label>Raciones</label>
+        <input type="number" name="rations" min="1" value="{{ receta.rations if receta }}">
+      </div>
+      <div>
+        <label>Tiempo (min)</label>
+        <input type="number" name="prep_time" min="0" value="{{ receta.prep_time if receta }}">
+      </div>
+    </div>
+
+    <div>
+      <label>Ingredientes (1 por línea)</label>
+      <textarea name="ingredients">{% if receta %}
+{% if receta.ingredients and receta.ingredients[0] is mapping %}
+{# Si vienen como diccionarios del viejo formato, los mostramos como 'nombre (cantidad unidad) – nota' #}
+{% for ing in receta.ingredients -%}
+{{- ing.nombre }}{% if ing.cantidad %} ({{ ing.cantidad }} {{ ing.unidad }}){% endif %}{% if ing.nota %} – {{ ing.nota }}{% endif %}
+{% if not loop.last %}{{ "\n" }}{% endif %}
+{%- endfor %}
+{% else %}
+{{ receta.ingredients|join("\n") }}
+{% endif %}
+{% endif %}</textarea>
+      <small>Ejemplos: <i>2 huevos</i>, <i>200 g harina</i>, <i>1 cdta sal</i></small>
+    </div>
+
+    <div>
+      <label>Pasos (1 por línea)</label>
+      <textarea name="steps">{% if receta %}{{ receta.steps|join("\n") }}{% endif %}</textarea>
+    </div>
+
+    <button type="submit">Guardar</button>
+    <a href="{{ url_for('inicio') }}">Cancelar</a>
+  </form>
+</body>
+</html>
