@@ -1,5 +1,6 @@
 from flask import Flask, render_template, abort
 from flask import request, redirect, url_for
+import unicodedata
 import json, os
 
 app = Flask(__name__)
@@ -18,41 +19,63 @@ def cargar_recetas():
         # Si el JSON estuviera corrupto, evita que casque la app
         return []
 
+def _norm(s):
+    if s is None:
+        return ""
+    if not isinstance(s, str):
+        s = str(s)
+    s = unicodedata.normalize("NFD", s)
+    s = "".join(ch for ch in s if unicodedata.category(ch) != "Mn")
+    return s.lower().strip()
+
 @app.route("/")
 def inicio():
     recetas = cargar_recetas()
 
     # Parámetros GET
-    busqueda = request.args.get("q", "").strip().lower()
-    buscar_en = request.args.get("campo", "nombre")  # nombre o ingredientes
-    ordenar = request.args.get("ordenar", "categoria")  # categoria, cocina, alfabetico
+    busqueda = request.args.get("q", "").strip()
+    buscar_en = request.args.get("campo", "nombre")      # "nombre" | "ingredientes"
+    ordenar   = request.args.get("ordenar", "categoria") # "categoria" | "cocina" | "alfabetico"
 
-    # Filtrado
+    # --- Filtrado ---
     if busqueda:
+        q = _norm(busqueda)
         if buscar_en == "nombre":
-            recetas = [r for r in recetas if busqueda in r["name"].lower()]
+            recetas = [r for r in recetas if q in _norm(r.get("name", ""))]
         elif buscar_en == "ingredientes":
-            recetas = [
-                r for r in recetas
-                if any(busqueda in ing.lower() for ing in r.get("ingredients", []))
-            ]
+            filtradas = []
+            for r in recetas:
+                ok = False
+                for ing in r.get("ingredients", []):
+                    if isinstance(ing, dict):
+                        # Busca en nombre y en nota (si existe)
+                        if q in _norm(ing.get("nombre", "")) or q in _norm(ing.get("nota", "")):
+                            ok = True
+                            break
+                    else:
+                        # Por si algún día guardas ingredientes como texto
+                        if q in _norm(ing):
+                            ok = True
+                            break
+                if ok:
+                    filtradas.append(r)
+            recetas = filtradas
 
-    # Ordenación y agrupación
+    # --- Orden y agrupación ---
     if ordenar == "categoria":
-        recetas.sort(key=lambda r: (r.get("category", ""), r["name"].lower()))
+        recetas.sort(key=lambda r: (r.get("category", "") or "", r.get("name","").lower()))
         agrupar_por = "category"
     elif ordenar == "cocina":
-        recetas.sort(key=lambda r: (r.get("cuisine", ""), r["name"].lower()))
+        recetas.sort(key=lambda r: (r.get("cuisine", "") or "", r.get("name","").lower()))
         agrupar_por = "cuisine"
     else:
-        recetas.sort(key=lambda r: r["name"].lower())
+        recetas.sort(key=lambda r: r.get("name","").lower())
         agrupar_por = None
 
-    # Agrupación en diccionario
     grupos = {}
     if agrupar_por:
         for r in recetas:
-            clave = r.get(agrupar_por, "Sin clasificar") or "Sin clasificar"
+            clave = r.get(agrupar_por, "") or "Sin clasificar"
             grupos.setdefault(clave, []).append(r)
     else:
         grupos[""] = recetas
