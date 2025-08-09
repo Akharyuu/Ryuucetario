@@ -1,16 +1,21 @@
 from flask import Flask, render_template, abort
-import json
-import os
+import json, os
 
 app = Flask(__name__)
-ARCHIVO_RECETAS = "recipes.json"
 
-# Cargar recetas
+# Ruta ABSOLUTA al JSON, importante en Render
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ARCHIVO_RECETAS = os.path.join(BASE_DIR, "recipes.json")
+
 def cargar_recetas():
-    if os.path.exists(ARCHIVO_RECETAS):
+    if not os.path.exists(ARCHIVO_RECETAS):
+        return []
+    try:
         with open(ARCHIVO_RECETAS, "r", encoding="utf-8") as f:
             return json.load(f)
-    return []
+    except Exception:
+        # Si el JSON estuviera corrupto, evita que casque la app
+        return []
 
 @app.route("/")
 def inicio():
@@ -26,4 +31,6 @@ def ver_receta(nombre):
     abort(404)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    # Nada de debug/reloader en Render
+    app.run(host="0.0.0.0", port=port, debug=False, use_reloader=False)
