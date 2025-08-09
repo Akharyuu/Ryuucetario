@@ -7,9 +7,11 @@
   <style>
     body { max-width: 820px; margin: 20px auto; }
     form { margin: 12px 0 24px; }
+    .row { margin: 8px 0; }
     h2 { margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
     ul { list-style: none; padding-left: 0; }
     li { margin: 6px 0; }
+    .meta { color: #555; font-size: 0.95em; margin-left: 8px; }
   </style>
 </head>
 <body>
@@ -18,25 +20,29 @@
   <p><a href="{{ url_for('nueva_receta') }}">➕ Nueva receta</a></p>
 
   <form method="get" action="{{ url_for('inicio') }}">
-    <input type="text" name="q" placeholder="Buscar..." value="{{ busqueda }}" />
+    <!-- Línea 1: buscador -->
+    <div class="row">
+      <input type="text" name="q" placeholder="Buscar..." value="{{ busqueda }}" />
+      &nbsp;
+      <label>
+        <input type="radio" name="campo" value="nombre" {% if buscar_en=='nombre' %}checked{% endif %}> Nombre
+      </label>
+      <label>
+        <input type="radio" name="campo" value="ingredientes" {% if buscar_en=='ingredientes' %}checked{% endif %}> Ingredientes
+      </label>
+    </div>
 
-    <label>
-      <input type="radio" name="campo" value="nombre" {% if buscar_en=='nombre' %}checked{% endif %}> Nombre
-    </label>
-    <label>
-      <input type="radio" name="campo" value="ingredientes" {% if buscar_en=='ingredientes' %}checked{% endif %}> Ingredientes
-    </label>
-
-    &nbsp;&nbsp;
-    <label>Ordenar por:
-      <select name="ordenar">
-        <option value="categoria"  {% if ordenar=='categoria'  %}selected{% endif %}>Categoría</option>
-        <option value="cocina"     {% if ordenar=='cocina'     %}selected{% endif %}>Cocina</option>
-        <option value="alfabetico" {% if ordenar=='alfabetico' %}selected{% endif %}>Alfabético</option>
-      </select>
-    </label>
-
-    <button type="submit">Aplicar</button>
+    <!-- Línea 2: ordenar -->
+    <div class="row">
+      <label>Ordenar por:
+        <select name="ordenar">
+          <option value="categoria"  {% if ordenar=='categoria'  %}selected{% endif %}>Categoría</option>
+          <option value="cocina"     {% if ordenar=='cocina'     %}selected{% endif %}>Cocina</option>
+          <option value="alfabetico" {% if ordenar=='alfabetico' %}selected{% endif %}>Alfabético</option>
+        </select>
+      </label>
+      <button type="submit">Aplicar</button>
+    </div>
   </form>
 
   {% for grupo, lista in grupos.items() %}
@@ -45,8 +51,11 @@
       {% for r in lista %}
         <li>
           <a href="{{ url_for('ver_receta', nombre=r.name|replace(' ', '-')|lower) }}">{{ r.name }}</a>
-          · <small>{{ r.cuisine }} — {{ r.category }}</small>
-          · <a href="{{ url_for('editar_receta', nombre=r.name|replace(' ', '-')|lower) }}">Editar</a>
+          {% if ordenar == 'cocina' %}
+            <span class="meta">· {{ r.category }}</span>
+          {% elif ordenar == 'categoria' %}
+            <span class="meta">· {{ r.cuisine }}</span>
+          {% endif %}
         </li>
       {% endfor %}
     </ul>

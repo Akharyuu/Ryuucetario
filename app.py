@@ -169,6 +169,20 @@ def editar_receta(nombre):
 
     return render_template("form_receta.html", receta=receta)
 
+@app.route("/eliminar/<nombre>", methods=["POST"])
+def eliminar_receta(nombre):
+    recetas = cargar_recetas()
+    slug = nombre.lower()
+    idx = next((i for i, r in enumerate(recetas)
+                if r.get("name","").lower().replace(" ", "-") == slug), None)
+    if idx is None:
+        abort(404)
+    del recetas[idx]
+    with open(ARCHIVO_RECETAS, "w", encoding="utf-8") as f:
+        json.dump(recetas, f, ensure_ascii=False, indent=2)
+    return redirect(url_for("inicio"))
+
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     # Nada de debug/reloader en Render
