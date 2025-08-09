@@ -3,17 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <title>Recetario</title>
+  <style>
+    body { max-width: 760px; margin: 20px auto; }
+    form { margin-bottom: 20px; }
+    h2 { border-bottom: 1px solid #ccc; margin-top: 30px; }
+    ul { list-style: none; padding-left: 0; }
+    li { margin-bottom: 5px; }
+  </style>
 </head>
 <body>
-  <h1>Recetas</h1>
-  <p><a href="{{ url_for('nueva_receta') }}">➕ Añadir receta</a></p>
-  <ul>
-    {% for receta in recetas %}
-      <li>
-        <a href="{{ url_for('ver_receta', nombre=receta.name|replace(' ', '-')|lower) }}">{{ receta.name }}</a>
-        · <a href="{{ url_for('editar_receta', nombre=receta.name|replace(' ', '-')|lower) }}">Editar</a>
-      </li>
-    {% endfor %}
-  </ul>
+  <h1>Recetario</h1>
+
+  <p><a href="{{ url_for('nueva_receta') }}">➕ Nueva receta</a></p>
+
+  <form method="get" action="{{ url_for('inicio') }}">
+    <input type="text" name="q" placeholder="Buscar..." value="{{ busqueda }}">
+    <label>
+      <input type="radio" name="campo" value="nombre" {% if buscar_en == "nombre" %}checked{% endif %}> Nombre
+    </label>
+    <label>
+      <input type="radio" name="campo" value="ingredientes" {% if buscar_en == "ingredientes" %}checked{% endif %}> Ingredientes
+    </label>
+    <br><br>
+    <label>
+      Ordenar por:
+      <select name="ordenar">
+        <option value="categoria" {% if ordenar == "categoria" %}selected{% endif %}>Categoría</option>
+        <option value="cocina" {% if ordenar == "cocina" %}selected{% endif %}>Cocina</option>
+        <option value="alfabetico" {% if ordenar == "alfabetico" %}selected{% endif %}>Alfabético</option>
+      </select>
+    </label>
+    <button type="submit">Filtrar</button>
+  </form>
+
+  {% for grupo, lista in grupos.items() %}
+    {% if grupo %}
+      <h2>{{ grupo }}</h2>
+    {% endif %}
+    <ul>
+      {% for r in lista %}
+        <li>
+          <a href="{{ url_for('ver_receta', nombre=r.name|replace(' ', '-')|lower) }}">{{ r.name }}</a>
+          · <a href="{{ url_for('editar_receta', nombre=r.name|replace(' ', '-')|lower) }}">Editar</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
 </body>
 </html>

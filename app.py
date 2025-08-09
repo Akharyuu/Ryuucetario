@@ -21,7 +21,47 @@ def cargar_recetas():
 @app.route("/")
 def inicio():
     recetas = cargar_recetas()
-    return render_template("index.html", recetas=recetas)
+
+    # Parámetros GET
+    busqueda = request.args.get("q", "").strip().lower()
+    buscar_en = request.args.get("campo", "nombre")  # nombre o ingredientes
+    ordenar = request.args.get("ordenar", "categoria")  # categoria, cocina, alfabetico
+
+    # Filtrado
+    if busqueda:
+        if buscar_en == "nombre":
+            recetas = [r for r in recetas if busqueda in r["name"].lower()]
+        elif buscar_en == "ingredientes":
+            recetas = [
+                r for r in recetas
+                if any(busqueda in ing.lower() for ing in r.get("ingredients", []))
+            ]
+
+    # Ordenación y agrupación
+    if ordenar == "categoria":
+        recetas.sort(key=lambda r: (r.get("category", ""), r["name"].lower()))
+        agrupar_por = "category"
+    elif ordenar == "cocina":
+        recetas.sort(key=lambda r: (r.get("cuisine", ""), r["name"].lower()))
+        agrupar_por = "cuisine"
+    else:
+        recetas.sort(key=lambda r: r["name"].lower())
+        agrupar_por = None
+
+    # Agrupación en diccionario
+    grupos = {}
+    if agrupar_por:
+        for r in recetas:
+            clave = r.get(agrupar_por, "Sin clasificar") or "Sin clasificar"
+            grupos.setdefault(clave, []).append(r)
+    else:
+        grupos[""] = recetas
+
+    return render_template("index.html",
+                           grupos=grupos,
+                           busqueda=busqueda,
+                           buscar_en=buscar_en,
+                           ordenar=ordenar)
 
 @app.route("/receta/<nombre>")
 def ver_receta(nombre):
