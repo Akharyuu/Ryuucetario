@@ -3,38 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ receta.name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+  <style>
+    body{max-width:900px;margin:auto;font-family:"Segoe UI",Arial,sans-serif;background:#fafafa;color:#333;padding:20px}
+    .header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .title{font-size:2rem;margin:0}
+    .actions a, .actions button{display:inline-block;background:#007bff;color:#fff;border:none;border-radius:6px;padding:8px 12px;text-decoration:none;cursor:pointer}
+    .actions a:hover{filter:brightness(0.95)}
+    .card{background:#fff;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.08);padding:16px;margin-top:16px}
+    .meta{display:flex;gap:12px;flex-wrap:wrap;color:#555}
+    .pill{background:#f1f3f5;border-radius:999px;padding:4px 10px;font-size:.9em}
+    h2{margin:18px 0 10px;color:#555}
+    ul{margin:0;padding-left:18px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media (max-width:700px){.grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-  <h1>{{ receta.name }}</h1>
-  <p><strong>Cocina:</strong> {{ receta.cuisine }}</p>
-  <p><strong>Raciones:</strong> {{ receta.rations }}</p>
-  <p><strong>Tiempo:</strong> {{ receta.prep_time }} min</p>
-  <p><strong>Categoría:</strong> {{ receta.category }}</p>
 
-  <h2>Ingredientes</h2>
-  <ul>
-    {% for ing in receta.ingredients %}
-      {% if ing is mapping %}
-        <li>
-          {{ ing.nombre }}{% if ing.cantidad %} ({{ ing.cantidad }} {{ ing.unidad }}){% endif %}{% if ing.nota %} – {{ ing.nota }}{% endif %}
-        </li>
-      {% else %}
-        <li>{{ ing }}</li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+  <div class="header">
+    <h1 class="title">{{ receta.name }}</h1>
+    <div class="actions">
+      <a href="{{ url_for('inicio') }}">← Volver</a>
+      <a href="{{ url_for('editar_receta', nombre=receta.name|replace(' ', '-')|lower) }}">✏️ Editar</a>
+    </div>
+  </div>
 
-  <h2>Pasos</h2>
-  <ol>
-    {% for paso in receta.steps %}
-      <li>{{ paso }}</li>
-    {% endfor %}
-  </ol>
+  <div class="card">
+    <div class="meta">
+      {% if receta.cuisine %}<span class="pill">Cocina: {{ receta.cuisine }}</span>{% endif %}
+      {% if receta.category %}<span class="pill">Categoría: {{ receta.category }}</span>{% endif %}
+      {% if receta.rations %}<span class="pill">Raciones: {{ receta.rations }}</span>{% endif %}
+      {% if receta.prep_time %}<span class="pill">Tiempo: {{ receta.prep_time }} min</span>{% endif %}
+    </div>
+  </div>
 
-  <p>
-    <a href="{{ url_for('editar_receta', nombre=receta.name|replace(' ', '-')|lower) }}">✏️ Editar</a>
-    · <a href="{{ url_for('inicio') }}">Volver</a>
-  </p>
+  <div class="grid">
+    <div class="card">
+      <h2>Ingredientes</h2>
+      <ul>
+        {% for ing in receta.ingredients %}
+          {% if ing is mapping %}
+            {# Formato diccionario: nombre, cantidad, unidad, nota #}
+            <li>
+              {{ ing.nombre }}
+              {% if ing.cantidad is not none %}
+                ({{ (ing.cantidad|float)|round(2)|string|replace('.0','') }}
+                {% if ing.unidad %} {{ ing.unidad }}{% endif %})
+              {% endif %}
+              {% if ing.nota %} – {{ ing.nota }}{% endif %}
+            </li>
+          {% else %}
+            <li>{{ ing }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Pasos</h2>
+      <ol>
+        {% for paso in receta.steps %}
+          <li style="margin-bottom:8px; line-height:1.5">{{ paso }}</li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
 
 </body>
 </html>
