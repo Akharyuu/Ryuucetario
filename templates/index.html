@@ -5,34 +5,107 @@
   <title>Recetario</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
   <style>
-    body { max-width: 820px; margin: 20px auto; }
-    form { margin: 12px 0 24px; }
-    .row { margin: 8px 0; }
-    h2 { margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
-    ul { list-style: none; padding-left: 0; }
-    li { margin: 6px 0; }
-    .meta { color: #555; font-size: 0.95em; margin-left: 8px; }
+    body {
+      max-width: 900px;
+      margin: auto;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.2em;
+      color: #444;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    form {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .row {
+      margin-bottom: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    input[type=text], select {
+      padding: 6px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      flex: 1;
+    }
+    button {
+      background: #28a745;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #218838;
+    }
+    h2 {
+      margin-top: 25px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      color: #555;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 15px;
+    }
+    .card {
+      background: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+    }
+    .card-title {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .meta {
+      font-size: 0.9em;
+      color: #666;
+    }
+    @media (max-width: 500px) {
+      body { padding: 10px; }
+      .row { flex-direction: column; align-items: stretch; }
+      input[type=text], select, button { width: 100%; }
+    }
   </style>
 </head>
 <body>
   <h1>Recetario</h1>
 
-  <p><a href="{{ url_for('nueva_receta') }}">➕ Nueva receta</a></p>
+  <p style="text-align:center;">
+    <a href="{{ url_for('nueva_receta') }}">➕ Nueva receta</a>
+  </p>
 
   <form method="get" action="{{ url_for('inicio') }}">
-    <!-- Línea 1: buscador -->
     <div class="row">
-      <input type="text" name="q" placeholder="Buscar..." value="{{ busqueda }}" />
-      &nbsp;
-      <label>
-        <input type="radio" name="campo" value="nombre" {% if buscar_en=='nombre' %}checked{% endif %}> Nombre
-      </label>
-      <label>
-        <input type="radio" name="campo" value="ingredientes" {% if buscar_en=='ingredientes' %}checked{% endif %}> Ingredientes
-      </label>
+      <input type="text" name="q" placeholder="Buscar..." value="{{ busqueda }}">
+      <label><input type="radio" name="campo" value="nombre" {% if buscar_en=='nombre' %}checked{% endif %}> Nombre</label>
+      <label><input type="radio" name="campo" value="ingredientes" {% if buscar_en=='ingredientes' %}checked{% endif %}> Ingredientes</label>
     </div>
-
-    <!-- Línea 2: ordenar -->
     <div class="row">
       <label>Ordenar por:
         <select name="ordenar">
@@ -47,18 +120,20 @@
 
   {% for grupo, lista in grupos.items() %}
     {% if grupo %}<h2>{{ grupo }}</h2>{% endif %}
-    <ul>
+    <div class="cards">
       {% for r in lista %}
-        <li>
-          <a href="{{ url_for('ver_receta', nombre=r.name|replace(' ', '-')|lower) }}">{{ r.name }}</a>
+        <div class="card">
+          <div class="card-title">
+            <a href="{{ url_for('ver_receta', nombre=r.name|replace(' ', '-')|lower) }}">{{ r.name }}</a>
+          </div>
           {% if ordenar == 'cocina' %}
-            <span class="meta">· {{ r.category }}</span>
+            <div class="meta">{{ r.category }}</div>
           {% elif ordenar == 'categoria' %}
-            <span class="meta">· {{ r.cuisine }}</span>
+            <div class="meta">{{ r.cuisine }}</div>
           {% endif %}
-        </li>
+        </div>
       {% endfor %}
-    </ul>
+    </div>
   {% endfor %}
 </body>
 </html>
