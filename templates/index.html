@@ -119,7 +119,8 @@
   </form>
 
   {% for grupo, lista in grupos.items() %}
-    {% if grupo %}<h2>{{ grupo }}</h2>{% endif %}
+  <div class="card" style="margin-bottom:16px">
+    {% if grupo %}<h2 style="border:0;margin:0 0 12px">{{ grupo }}</h2>{% endif %}
     <div class="cards">
       {% for r in lista %}
         <div class="card">
@@ -133,6 +134,7 @@
           {% endif %}
         </div>
       {% endfor %}
+       </div>
     </div>
   {% endfor %}
 </body>
