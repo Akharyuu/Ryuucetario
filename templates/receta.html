@@ -29,6 +29,14 @@
     </div>
   </div>
 
+  {% if receta.image %}
+    <div class="card" style="padding:0; overflow:hidden; margin-top:16px">
+      <img src="{{ url_for('static', filename='uploads/' ~ receta.image) }}"
+           alt="Foto de {{ receta.name }}"
+           style="width:100%; display:block; max-height:380px; object-fit:cover">
+    </div>
+  {% endif %}
+
   <div class="card">
     <div class="meta">
       {% if receta.cuisine %}<span class="pill">Cocina: {{ receta.cuisine }}</span>{% endif %}
@@ -62,12 +70,13 @@
 
     <div class="card">
       <h2>Pasos</h2>
-      <ol>
+      <ol class="steps">
         {% for paso in receta.steps %}
-          <li style="margin-bottom:8px; line-height:1.5">{{ paso }}</li>
+          <li>{{ paso }}</li>
         {% endfor %}
       </ol>
     </div>
+
   </div>
 
 </body>

@@ -2,12 +2,19 @@ from flask import Flask, render_template, abort
 from flask import request, redirect, url_for
 import unicodedata
 import json, os
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
 # Ruta ABSOLUTA al JSON, importante en Render
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ARCHIVO_RECETAS = os.path.join(BASE_DIR, "recipes.json")
+UPLOAD_FOLDER = os.path.join(BASE_DIR, "static", "uploads")
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+ALLOWED_EXT = {"png","jpg","jpeg","webp"}
+def allowed_file(filename):
+    return "." in filename and filename.rsplit(".",1)[1].lower() in ALLOWED_EXT
+
 
 def cargar_recetas():
     if not os.path.exists(ARCHIVO_RECETAS):
@@ -123,6 +130,17 @@ def nueva_receta():
             "steps": pasos
         }
 
+        filename = None
+        file = request.files.get("photo")
+        if file and file.filename and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            # evita colisiones
+            name, ext = os.path.splitext(filename)
+            filename = f"{name}_{int(os.path.getmtime(ARCHIVO_RECETAS))}{ext}"
+            file.save(os.path.join(UPLOAD_FOLDER, filename))
+        if filename:
+            nueva["image"] = filename
+
         recetas.append(nueva)
         with open(ARCHIVO_RECETAS, "w", encoding="utf-8") as f:
             json.dump(recetas, f, ensure_ascii=False, indent=2)
@@ -152,6 +170,18 @@ def editar_receta(nombre):
             except:
                 return default
 
+        # mantener imagen previa salvo que subas otra o marques eliminar
+        filename = receta.get("image")
+        if request.form.get("remove_image") == "1":
+            filename = None
+        file = request.files.get("photo")
+        if file and file.filename and allowed_file(file.filename):
+            fn = secure_filename(file.filename)
+            name, ext = os.path.splitext(fn)
+            fn = f"{name}_{int(os.path.getmtime(ARCHIVO_RECETAS))}{ext}"
+            file.save(os.path.join(UPLOAD_FOLDER, fn))
+            filename = fn
+
         receta.update({
             "name": request.form.get("name", "").strip(),
             "cuisine": request.form.get("cuisine", "").strip(),
@@ -159,7 +189,8 @@ def editar_receta(nombre):
             "prep_time": to_int(request.form.get("prep_time", 0)),
             "category": request.form.get("category", "").strip() or "Principal",
             "ingredients": ingredientes,
-            "steps": pasos
+            "steps": pasos,
+            "image": filename
         })
 
         with open(ARCHIVO_RECETAS, "w", encoding="utf-8") as f:
