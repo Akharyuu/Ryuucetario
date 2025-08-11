@@ -191,3 +191,14 @@ textarea{
 }
 .actions a:hover{ filter:brightness(.95) }
 .meta{ display:flex; gap:12px; flex-wrap:wrap; color:#555 }
+
+/* Alinear select y botón en la fila de ordenar */
+.ordenar-row {
+  flex-wrap: nowrap;
+}
+.ordenar-row select {
+  flex: 1; /* ocupa todo el espacio posible */
+}
+.ordenar-row .btn {
+  flex: 0 0 auto; /* tamaño del contenido */
+}

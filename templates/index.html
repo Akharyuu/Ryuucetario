@@ -18,7 +18,7 @@
       <label><input type="radio" name="campo" value="nombre" {% if buscar_en=='nombre' %}checked{% endif %}> Nombre</label>
       <label><input type="radio" name="campo" value="ingredientes" {% if buscar_en=='ingredientes' %}checked{% endif %}> Ingredientes</label>
     </div>
-    <div class="row">
+    <div class="row ordenar-row">
       <label for="ordenar">Ordenar por:</label>
       <select id="ordenar" name="ordenar">
         <option value="categoria"  {% if ordenar=='categoria'  %}selected{% endif %}>Categoría</option>
