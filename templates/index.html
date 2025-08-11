@@ -19,13 +19,12 @@
       <label><input type="radio" name="campo" value="ingredientes" {% if buscar_en=='ingredientes' %}checked{% endif %}> Ingredientes</label>
     </div>
     <div class="row">
-      <label>Ordenar por:
-        <select name="ordenar">
-          <option value="categoria"  {% if ordenar=='categoria'  %}selected{% endif %}>Categoría</option>
-          <option value="cocina"     {% if ordenar=='cocina'     %}selected{% endif %}>Cocina</option>
-          <option value="alfabetico" {% if ordenar=='alfabetico' %}selected{% endif %}>Alfabético</option>
-        </select>
-      </label>
+      <label for="ordenar">Ordenar por:</label>
+      <select id="ordenar" name="ordenar">
+        <option value="categoria"  {% if ordenar=='categoria'  %}selected{% endif %}>Categoría</option>
+        <option value="cocina"     {% if ordenar=='cocina'     %}selected{% endif %}>Cocina</option>
+        <option value="alfabetico" {% if ordenar=='alfabetico' %}selected{% endif %}>Alfabético</option>
+      </select>
       <button type="submit" class="btn btn-success">Aplicar</button>
     </div>
   </form>
