@@ -188,3 +188,11 @@ textarea{
   color: #fff;
   font-weight: 700;
 }
+
+/* Página detalle receta */
+.actions a, .actions button{
+  display:inline-block;background:#007bff;color:#fff;border:none;border-radius:6px;
+  padding:8px 12px;text-decoration:none;cursor:pointer
+}
+.actions a:hover{ filter:brightness(.95) }
+.meta{ display:flex; gap:12px; flex-wrap:wrap; color:#555 }
