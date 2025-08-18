@@ -16,7 +16,7 @@
 
   <form method="POST" enctype="multipart/form-data" class="card">
 
-    <!-- Bloque 1: Nombre + Categoría -->
+    <!-- Bloque 1: Nombre + Categoría (2 columnas con gap) -->
     <div class="form-grid">
       <div class="field">
         <label for="name">Nombre</label>
@@ -34,7 +34,7 @@
       </div>
     </div>
 
-    <!-- Bloque 2: Cocina + Raciones + Tiempo (alineados en 3 columnas) -->
+    <!-- Bloque 2: Cocina + Raciones + Tiempo (3 columnas reales, con gap) -->
     <div class="form-grid-3">
       <div class="field">
         <label for="cuisine">Cocina</label>
@@ -57,7 +57,6 @@
       </div>
     </div>
 
-
     <!-- Bloque 3: Foto -->
     <div class="form-grid">
       <div class="field" style="grid-column:1 / -1">
@@ -76,20 +75,20 @@
       </div>
     </div>
 
-    <!-- Bloque 4: Ingredientes y Pasos -->
+    <!-- Bloque 4: Ingredientes + Pasos (2 columnas con gap) -->
     <div class="form-grid">
       <div class="field">
         <label for="ingredients">Ingredientes (1 por línea)</label>
         <textarea id="ingredients" name="ingredients">{% if receta %}
-    {% if receta.ingredients and receta.ingredients[0] is mapping -%}
-    {%- for ing in receta.ingredients -%}
-    {{- ing.nombre }}{% if ing.cantidad is not none %} ({{ ing.cantidad }} {{ ing.unidad }}){% endif %}{% if ing.nota %} – {{ ing.nota }}{% endif %}
-    {% if not loop.last %}{{ "\n" }}{% endif %}
-    {%- endfor -%}
-    {%- else -%}
-    {{ receta.ingredients|join("\n") }}
-    {%- endif -%}
-    {% endif %}</textarea>
+  {% if receta.ingredients and receta.ingredients[0] is mapping -%}
+  {%- for ing in receta.ingredients -%}
+  {{- ing.nombre }}{% if ing.cantidad is not none %} ({{ ing.cantidad }} {{ ing.unidad }}){% endif %}{% if ing.nota %} – {{ ing.nota }}{% endif %}
+  {% if not loop.last %}{{ "\n" }}{% endif %}
+  {%- endfor -%}
+  {%- else -%}
+  {{ receta.ingredients|join("\n") }}
+  {%- endif -%}
+  {% endif %}</textarea>
         <small class="help">Ejemplos: “200 g harina”, “2 huevos”, “1 cdta sal”.</small>
       </div>
 
@@ -99,12 +98,12 @@
       </div>
     </div>
 
-
     <div class="form-actions">
       <button type="submit" class="btn">💾 Guardar</button>
       <a href="{{ url_for('inicio') }}" class="btn btn-secondary">Cancelar</a>
     </div>
   </form>
+
 
   {% if receta %}
   <form method="POST"

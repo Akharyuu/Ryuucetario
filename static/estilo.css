@@ -214,17 +214,17 @@ textarea{
   align-items:center;
 }
 
-/* Rejillas limpias para formularios */
+/* Rejillas limpias y consistentes para el formulario */
 .form-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:16px;                 /* separación uniforme entre columnas */
+  gap:16px;
   margin-bottom:16px;
 }
 .form-grid-3{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
-  gap:16px;                 /* aquí se arregla Cocina–Raciones–Tiempo */
+  gap:16px;                 /* asegura separación uniforme Cocina–Raciones–Tiempo */
   margin-bottom:16px;
 }
 .field label{
@@ -232,6 +232,8 @@ textarea{
   margin-bottom:6px;
   font-weight:600;
 }
+
+/* Botonera del formulario */
 .form-actions{
   margin-top:14px;
   display:flex;
@@ -241,20 +243,19 @@ textarea{
 
 /* Móviles: una columna */
 @media (max-width:750px){
-  .form-grid,
-  .form-grid-3{ grid-template-columns:1fr; }
+  .form-grid, .form-grid-3{ grid-template-columns:1fr; }
 }
 
-/* Botones: mismas dimensiones para <button> y <a> */
+/* Botones con mismas dimensiones en <a> y <button> */
 .btn, .btn:link, .btn:visited{
   font-size:15px;
   line-height:1;
-  height:42px;             /* altura consistente */
+  height:42px;
   padding:0 16px;
-  display:inline-flex;     /* igual en <a> y <button> */
+  display:inline-flex;
   align-items:center;
   justify-content:center;
   gap:8px;
-  text-decoration:none;    /* quita subrayado en <a> */
+  text-decoration:none;
   border-radius:8px;
 }
