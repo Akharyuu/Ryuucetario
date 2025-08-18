@@ -15,38 +15,53 @@
   </div>
 
   <form method="POST" enctype="multipart/form-data" class="card">
-    <!-- Bloque 1: datos básicos -->
-    <div class="grid">
-      <div>
-        <label>Nombre</label>
-        <input type="text" name="name" required value="{{ receta.name if receta }}">
-      </div>
-      <div>
-        <label>Categoría</label>
-        <input type="text" name="category" value="{{ receta.category if receta }}">
-      </div>
-      <div>
-        <label>Cocina</label>
-        <input type="text" name="cuisine" value="{{ receta.cuisine if receta }}">
+
+    <!-- Bloque 1: Nombre + Categoría -->
+    <div class="form-grid">
+      <div class="field">
+        <label for="name">Nombre</label>
+        <input id="name" type="text" name="name" required value="{{ receta.name if receta }}">
       </div>
 
-      <div class="row" style="gap:16px">
-        <div style="flex:1">
-          <label>Raciones</label>
-          <input type="number" name="rations" min="1" value="{{ receta.rations if receta }}">
-        </div>
-        <div style="flex:1">
-          <label>Tiempo (min)</label>
-          <input type="number" name="prep_time" min="0" value="{{ receta.prep_time if receta }}">
-        </div>
+      <div class="field">
+        <label for="category">Categoría</label>
+        <select id="category" name="category">
+          {% set cats = ['Entrante','Principal','Acompañamiento','Postre','Salsa'] %}
+          {% for c in cats %}
+            <option value="{{ c }}" {% if receta and receta.category==c %}selected{% endif %}>{{ c }}</option>
+          {% endfor %}
+        </select>
       </div>
-    </div> <!-- /grid datos básicos -->
+    </div>
 
-    <!-- Bloque 2: foto -->
-    <div class="grid" style="margin-top:10px">
-      <div>
-        <label>Foto del plato</label>
-        <input type="file" name="photo" accept="image/*">
+    <!-- Bloque 2: Cocina + Raciones + Tiempo (alineados en 3 columnas) -->
+    <div class="form-grid-3">
+      <div class="field">
+        <label for="cuisine">Cocina</label>
+        <select id="cuisine" name="cuisine">
+          {% set cuisines = ['Española','Francesa','Italiana','Griega','Japonesa','China','Tailandesa','India','Americana'] %}
+          {% for cu in cuisines %}
+            <option value="{{ cu }}" {% if receta and receta.cuisine==cu %}selected{% endif %}>{{ cu }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="rations">Raciones</label>
+        <input id="rations" type="number" name="rations" min="1" step="1" value="{{ receta.rations if receta else 1 }}">
+      </div>
+
+      <div class="field">
+        <label for="prep_time">Tiempo (min)</label>
+        <input id="prep_time" type="number" name="prep_time" min="0" step="1" value="{{ receta.prep_time if receta }}">
+      </div>
+    </div>
+
+    <!-- Bloque 3: Foto -->
+    <div class="form-grid">
+      <div class="field" style="grid-column:1 / -1">
+        <label for="photo">Foto del plato</label>
+        <input id="photo" type="file" name="photo" accept="image/*">
         {% if receta and receta.image %}
           <div style="margin-top:8px">
             <img src="{{ url_for('static', filename='uploads/' ~ receta.image) }}"
@@ -54,33 +69,32 @@
                  style="max-width:240px;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.12)">
           </div>
           <label style="display:flex;gap:8px;align-items:center;margin-top:8px">
-            <input type="checkbox" name="remove_image" value="1">
-            Eliminar foto
+            <input type="checkbox" name="remove_image" value="1"> Eliminar foto
           </label>
         {% endif %}
       </div>
     </div>
 
-    <!-- Bloque 3: ingredientes y pasos -->
-    <div class="grid" style="margin-top:10px">
-      <div>
-        <label>Ingredientes (1 por línea)</label>
-        <textarea name="ingredients">{% if receta %}
-{% if receta.ingredients and receta.ingredients[0] is mapping -%}
-{%- for ing in receta.ingredients -%}
-{{- ing.nombre }}{% if ing.cantidad is not none %} ({{ ing.cantidad }} {{ ing.unidad }}){% endif %}{% if ing.nota %} – {{ ing.nota }}{% endif %}
-{% if not loop.last %}{{ "\n" }}{% endif %}
-{%- endfor -%}
-{%- else -%}
-{{ receta.ingredients|join("\n") }}
-{%- endif -%}
-{% endif %}</textarea>
+    <!-- Bloque 4: Ingredientes y Pasos -->
+    <div class="form-grid">
+      <div class="field">
+        <label for="ingredients">Ingredientes (1 por línea)</label>
+        <textarea id="ingredients" name="ingredients">{% if receta %}
+  {% if receta.ingredients and receta.ingredients[0] is mapping -%}
+  {%- for ing in receta.ingredients -%}
+  {{- ing.nombre }}{% if ing.cantidad is not none %} ({{ ing.cantidad }} {{ ing.unidad }}){% endif %}{% if ing.nota %} – {{ ing.nota }}{% endif %}
+  {% if not loop.last %}{{ "\n" }}{% endif %}
+  {%- endfor -%}
+  {%- else -%}
+  {{ receta.ingredients|join("\n") }}
+  {%- endif -%}
+  {% endif %}</textarea>
         <small class="help">Ejemplos: “200 g harina”, “2 huevos”, “1 cdta sal”.</small>
       </div>
 
-      <div>
-        <label>Pasos (1 por línea)</label>
-        <textarea name="steps">{% if receta %}{{ receta.steps|join("\n") }}{% endif %}</textarea>
+      <div class="field">
+        <label for="steps">Pasos (1 por línea)</label>
+        <textarea id="steps" name="steps">{% if receta %}{{ receta.steps|join("\n") }}{% endif %}</textarea>
       </div>
     </div>
 

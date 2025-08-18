@@ -213,3 +213,37 @@ textarea{
   gap:10px;
   align-items:center;
 }
+
+/* ---- Form: rejillas y separación limpia ---- */
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-bottom:16px;
+}
+.form-grid-3{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:16px;
+  margin-bottom:16px;
+}
+.field label{
+  display:block;
+  margin-bottom:6px;
+  font-weight:600;
+}
+.field + .field{ /* separación vertical en móviles cuando colapsa a 1 columna */
+  margin-top:0;
+}
+.form-actions{
+  margin-top:14px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.help{ color:#666; font-size:.9em }
+
+/* En pantallas estrechas, las rejillas pasan a 1 columna */
+@media (max-width:750px){
+  .form-grid, .form-grid-3{ grid-template-columns:1fr; }
+}
