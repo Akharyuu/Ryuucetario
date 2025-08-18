@@ -57,6 +57,7 @@
       </div>
     </div>
 
+
     <!-- Bloque 3: Foto -->
     <div class="form-grid">
       <div class="field" style="grid-column:1 / -1">
@@ -80,15 +81,15 @@
       <div class="field">
         <label for="ingredients">Ingredientes (1 por línea)</label>
         <textarea id="ingredients" name="ingredients">{% if receta %}
-  {% if receta.ingredients and receta.ingredients[0] is mapping -%}
-  {%- for ing in receta.ingredients -%}
-  {{- ing.nombre }}{% if ing.cantidad is not none %} ({{ ing.cantidad }} {{ ing.unidad }}){% endif %}{% if ing.nota %} – {{ ing.nota }}{% endif %}
-  {% if not loop.last %}{{ "\n" }}{% endif %}
-  {%- endfor -%}
-  {%- else -%}
-  {{ receta.ingredients|join("\n") }}
-  {%- endif -%}
-  {% endif %}</textarea>
+    {% if receta.ingredients and receta.ingredients[0] is mapping -%}
+    {%- for ing in receta.ingredients -%}
+    {{- ing.nombre }}{% if ing.cantidad is not none %} ({{ ing.cantidad }} {{ ing.unidad }}){% endif %}{% if ing.nota %} – {{ ing.nota }}{% endif %}
+    {% if not loop.last %}{{ "\n" }}{% endif %}
+    {%- endfor -%}
+    {%- else -%}
+    {{ receta.ingredients|join("\n") }}
+    {%- endif -%}
+    {% endif %}</textarea>
         <small class="help">Ejemplos: “200 g harina”, “2 huevos”, “1 cdta sal”.</small>
       </div>
 
@@ -97,6 +98,7 @@
         <textarea id="steps" name="steps">{% if receta %}{{ receta.steps|join("\n") }}{% endif %}</textarea>
       </div>
     </div>
+
 
     <div class="form-actions">
       <button type="submit" class="btn">💾 Guardar</button>
