@@ -1,55 +1,71 @@
-<form method="POST" enctype="multipart/form-data" class="card">
-  <!-- Bloque 1: datos básicos -->
-  <div class="grid">
-    <div>
-      <label>Nombre</label>
-      <input type="text" name="name" required value="{{ receta.name if receta }}">
-    </div>
-    <div>
-      <label>Categoría</label>
-      <input type="text" name="category" value="{{ receta.category if receta }}">
-    </div>
-    <div>
-      <label>Cocina</label>
-      <input type="text" name="cuisine" value="{{ receta.cuisine if receta }}">
-    </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>{% if receta %}Editar receta{% else %}Nueva receta{% endif %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+<body>
 
-    <div class="row" style="gap:16px">
-      <div style="flex:1">
-        <label>Raciones</label>
-        <input type="number" name="rations" min="1" value="{{ receta.rations if receta }}">
-      </div>
-      <div style="flex:1">
-        <label>Tiempo (min)</label>
-        <input type="number" name="prep_time" min="0" value="{{ receta.prep_time if receta }}">
-      </div>
-    </div>
-  </div> <!-- /grid datos básicos -->
-
-  <!-- Bloque 2: foto -->
-  <div class="grid" style="margin-top:10px">
-    <div>
-      <label>Foto del plato</label>
-      <input type="file" name="photo" accept="image/*">
-      {% if receta and receta.image %}
-        <div style="margin-top:8px">
-          <img src="{{ url_for('static', filename='uploads/' ~ receta.image) }}"
-               alt="Foto actual"
-               style="max-width:240px;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.12)">
-        </div>
-        <label style="display:flex;gap:8px;align-items:center;margin-top:8px">
-          <input type="checkbox" name="remove_image" value="1">
-          Eliminar foto
-        </label>
-      {% endif %}
+  <div class="header">
+    <h1 class="title">{% if receta %}Editar receta{% else %}Nueva receta{% endif %}</h1>
+    <div class="actions">
+      <a href="{{ url_for('inicio') }}" class="btn btn-secondary">← Volver</a>
     </div>
   </div>
 
-  <!-- Bloque 3: ingredientes y pasos -->
-  <div class="grid" style="margin-top:10px">
-    <div>
-      <label>Ingredientes (1 por línea)</label>
-      <textarea name="ingredients">{% if receta %}
+  <form method="POST" enctype="multipart/form-data" class="card">
+    <!-- Bloque 1: datos básicos -->
+    <div class="grid">
+      <div>
+        <label>Nombre</label>
+        <input type="text" name="name" required value="{{ receta.name if receta }}">
+      </div>
+      <div>
+        <label>Categoría</label>
+        <input type="text" name="category" value="{{ receta.category if receta }}">
+      </div>
+      <div>
+        <label>Cocina</label>
+        <input type="text" name="cuisine" value="{{ receta.cuisine if receta }}">
+      </div>
+
+      <div class="row" style="gap:16px">
+        <div style="flex:1">
+          <label>Raciones</label>
+          <input type="number" name="rations" min="1" value="{{ receta.rations if receta }}">
+        </div>
+        <div style="flex:1">
+          <label>Tiempo (min)</label>
+          <input type="number" name="prep_time" min="0" value="{{ receta.prep_time if receta }}">
+        </div>
+      </div>
+    </div> <!-- /grid datos básicos -->
+
+    <!-- Bloque 2: foto -->
+    <div class="grid" style="margin-top:10px">
+      <div>
+        <label>Foto del plato</label>
+        <input type="file" name="photo" accept="image/*">
+        {% if receta and receta.image %}
+          <div style="margin-top:8px">
+            <img src="{{ url_for('static', filename='uploads/' ~ receta.image) }}"
+                 alt="Foto actual"
+                 style="max-width:240px;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.12)">
+          </div>
+          <label style="display:flex;gap:8px;align-items:center;margin-top:8px">
+            <input type="checkbox" name="remove_image" value="1">
+            Eliminar foto
+          </label>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Bloque 3: ingredientes y pasos -->
+    <div class="grid" style="margin-top:10px">
+      <div>
+        <label>Ingredientes (1 por línea)</label>
+        <textarea name="ingredients">{% if receta %}
 {% if receta.ingredients and receta.ingredients[0] is mapping -%}
 {%- for ing in receta.ingredients -%}
 {{- ing.nombre }}{% if ing.cantidad is not none %} ({{ ing.cantidad }} {{ ing.unidad }}){% endif %}{% if ing.nota %} – {{ ing.nota }}{% endif %}
@@ -59,26 +75,29 @@
 {{ receta.ingredients|join("\n") }}
 {%- endif -%}
 {% endif %}</textarea>
-      <small>Ejemplos: “200 g harina”, “2 huevos”, “1 cdta sal”.</small>
+        <small class="help">Ejemplos: “200 g harina”, “2 huevos”, “1 cdta sal”.</small>
+      </div>
+
+      <div>
+        <label>Pasos (1 por línea)</label>
+        <textarea name="steps">{% if receta %}{{ receta.steps|join("\n") }}{% endif %}</textarea>
+      </div>
     </div>
 
-    <div>
-      <label>Pasos (1 por línea)</label>
-      <textarea name="steps">{% if receta %}{{ receta.steps|join("\n") }}{% endif %}</textarea>
+    <div class="form-actions">
+      <button type="submit" class="btn">💾 Guardar</button>
+      <a href="{{ url_for('inicio') }}" class="btn btn-secondary">Cancelar</a>
     </div>
-  </div>
+  </form>
 
-  <div class="actions">
-    <button type="submit" class="btn">💾 Guardar</button>
-    <a href="{{ url_for('inicio') }}" class="btn btn-secondary">Cancelar</a>
-  </div>
-</form>
+  {% if receta %}
+  <form method="POST"
+        action="{{ url_for('eliminar_receta', nombre=receta.name|replace(' ', '-')|lower) }}"
+        onsubmit="return confirm('¿Seguro que quieres eliminar esta receta? Esta acción no se puede deshacer.');"
+        class="card" style="margin-top:12px">
+    <button type="submit" class="btn btn-danger">🗑️ Eliminar receta</button>
+  </form>
+  {% endif %}
 
-{% if receta %}
-<form method="POST"
-      action="{{ url_for('eliminar_receta', nombre=receta.name|replace(' ', '-')|lower) }}"
-      onsubmit="return confirm('¿Seguro que quieres eliminar esta receta? Esta acción no se puede deshacer.');"
-      class="card" style="margin-top:12px">
-  <button type="submit" class="btn btn-danger">🗑️ Eliminar receta</button>
-</form>
-{% endif %}
+</body>
+</html>

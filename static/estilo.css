@@ -202,3 +202,14 @@ textarea{
 .ordenar-row .btn {
   flex: 0 0 auto; /* tamaño del contenido */
 }
+
+/* Ayuda bajo los textarea */
+.help { color:#666; font-size:.9em }
+
+/* Botonera del formulario */
+.form-actions{
+  margin-top:12px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
