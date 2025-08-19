@@ -1,6 +1,6 @@
 import tkinter as tk
 from functools import partial
-from app.recipe import recetario, cargar_recetario, guardar_recetario, Recipe
+from recipe import recetario, cargar_recetario, guardar_receta_individual, Recipe
 from tkinter import messagebox, ttk
 
 class RecetarioApp:
@@ -474,7 +474,7 @@ class RecetarioApp:
                 recetario[recetario.index(receta_original)] = receta
             else:
                 recetario.append(receta)
-            guardar_recetario()
+            guardar_receta_individual()
             tk.messagebox.showinfo("Guardado", f"Receta '{nombre}' guardada correctamente.")
             self.mostrar_lista_recetas()
 
@@ -489,7 +489,7 @@ class RecetarioApp:
                 confirmar = messagebox.askyesno("Eliminar receta", "¿Estás seguro de que quieres eliminar esta receta?")
                 if confirmar and receta_original in recetario:
                     recetario.remove(receta_original)
-                    guardar_recetario()
+                    guardar_receta_individual()
                     messagebox.showinfo("Receta eliminada", "La receta se ha eliminado correctamente.")
                     self.mostrar_lista_recetas()
 

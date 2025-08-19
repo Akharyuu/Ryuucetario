@@ -1,8 +1,4 @@
-import json
-import os
 from db import get_recipes, add_recipe
-
-ARCHIVO_RECETAS = "recetas.json"
 
 class Recipe:
 
@@ -15,24 +11,12 @@ class Recipe:
         self.prep_time = prep_time
         self.category = category
 
-recetario = []
 
-def guardar_recetario():
-    # en vez de sobrescribir todo como JSON,
-    # insertamos una a una en la tabla
-    for r in recetario:
-        add_recipe({
-            "nombre": r.name,
-            "cocina": r.cuisine,
-            "raciones": r.rations,
-            "ingredientes": ", ".join(r.ingredients),
-            "pasos": r.steps,
-            "tiempo": r.prep_time,
-            "categoria": r.category
-        })
+recetario = []
 
 def cargar_recetario():
     datos = get_recipes()
+    recetario.clear()
     for r in datos:
         receta = Recipe(
             r["nombre"],
@@ -45,3 +29,13 @@ def cargar_recetario():
         )
         recetario.append(receta)
 
+def guardar_receta_individual(receta):
+    add_recipe({
+        "nombre": receta.name,
+        "cocina": receta.cuisine,
+        "raciones": receta.rations,
+        "ingredientes": ", ".join(receta.ingredients),
+        "pasos": receta.steps,
+        "tiempo": receta.prep_time,
+        "categoria": receta.category
+    })
