@@ -1,8 +1,8 @@
-# db.py
+import os
 from supabase import create_client, Client
 
-url = "https://TU_PROJECT.supabase.co"   # 👉 pon tu URL real
-key = "TU_ANON_KEY"                      # 👉 tu anon key
+url = os.environ.get("SUPABASE_URL")
+key = os.environ.get("SUPABASE_KEY")
 
 supabase: Client = create_client(url, key)
 
