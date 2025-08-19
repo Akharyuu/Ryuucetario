@@ -489,7 +489,6 @@ class RecetarioApp:
                 confirmar = messagebox.askyesno("Eliminar receta", "¿Estás seguro de que quieres eliminar esta receta?")
                 if confirmar and receta_original in recetario:
                     recetario.remove(receta_original)
-                    guardar_receta_individual(receta)
                     messagebox.showinfo("Receta eliminada", "La receta se ha eliminado correctamente.")
                     self.mostrar_lista_recetas()
 
