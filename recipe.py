@@ -1,5 +1,6 @@
 import json
 import os
+from db import get_recipes, add_recipe
 
 ARCHIVO_RECETAS = "recetas.json"
 
@@ -17,25 +18,30 @@ class Recipe:
 recetario = []
 
 def guardar_recetario():
-    with open(ARCHIVO_RECETAS, "w", encoding="utf-8") as f:
-        json.dump([r.__dict__ for r in recetario], f, ensure_ascii=False, indent=2)
+    # en vez de sobrescribir todo como JSON,
+    # insertamos una a una en la tabla
+    for r in recetario:
+        add_recipe({
+            "nombre": r.name,
+            "cocina": r.cuisine,
+            "raciones": r.rations,
+            "ingredientes": ", ".join(r.ingredients),
+            "pasos": r.steps,
+            "tiempo": r.prep_time,
+            "categoria": r.category
+        })
 
 def cargar_recetario():
-    if os.path.exists(ARCHIVO_RECETAS):
-        with open(ARCHIVO_RECETAS, "r", encoding="utf-8") as f:
-            datos = json.load(f)
-            for r in datos:
-                receta = Recipe(
-                    r["name"],
-                    r["cuisine"],
-                    r["rations"],
-                    r["ingredients"],
-                    r["steps"],
-                    r.get("prep_time", 0),
-                    r.get("category", "Principal")
-                )
-                recetario.append(receta)
-
-
-
+    datos = get_recipes()
+    for r in datos:
+        receta = Recipe(
+            r["nombre"],
+            r["cocina"],
+            r["raciones"],
+            r["ingredientes"].split(", "),
+            r["pasos"],
+            r.get("tiempo", ""),
+            r.get("categoria", "Principal")
+        )
+        recetario.append(receta)
 
